@@ -3,7 +3,7 @@ import re
 
 from coffea.processor import run_uproot_job, futures_executor
 
-from python.SUEP_NTupleProducer import *
+from python.SUEP_Producer import *
 from python.SumWeights import *
 
 import uproot
@@ -124,7 +124,3 @@ for instance in modules_gensum:
     for h, hist in output.items():
         f[h] = export1d(hist)
         print(f'wrote {h} to tree_{options.jobNum}_WS.root')
-
-#
-#elapsed = time.time() - tstart
-#print ("elapsed time is:", elapsed)

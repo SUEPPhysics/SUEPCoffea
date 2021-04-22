@@ -70,12 +70,6 @@ class SUEP_NTuple(WSProducer):
             'region': ['basic', 'nconst_85', 'nconst_100', 'nconst_150', 'nconst_175', 'nconst_200', 'nconst_250'],
             'axis': {'label': 'nCleaned_Cands', 'n_or_arr': 500, 'lo': 0, 'hi': 500}
         },
-        'h_nPFCands': {
-            'target': 'nPFCands',
-            'name': 'nPFCands',  # name to write to histogram
-            'region': ['basic', 'nconst_85', 'nconst_100', 'nconst_150', 'nconst_175', 'nconst_200', 'nconst_250'],
-            'axis': {'label': 'nPFCands', 'n_or_arr': 800, 'lo': 0, 'hi': 800}
-        },
         'h_met_pt': {
             'target': 'met_pt',
             'name': 'met_pt',  # name to write to histogram
@@ -319,36 +313,37 @@ class SUEP_NTuple(WSProducer):
     }
     selection = {
             "basic" : [
-                "event.met_filter{sys}==1" ,
+                "event.nCleaned_Cands{sys} > 0"
+                #"event.met_filter{sys}==1" ,
 		#"(event.HLT_PFHT1050{sys}==1) | (event.HLT_PFJet500{sys}==1)",
 	    ],
             "nconst_85" : [
-                "event.met_filter{sys}==1" ,
+                #"event.met_filter{sys}==1" ,
                 #"(event.HLT_PFHT1050{sys}==1) | (event.HLT_PFJet500{sys}==1)",
 		"event.nCleaned_Cands{sys} > 85"
             ],
             "nconst_100" : [
-                "event.met_filter{sys}==1" ,
+                #"event.met_filter{sys}==1" ,
                 #"(event.HLT_PFHT1050{sys}==1) | (event.HLT_PFJet500{sys}==1)",
                 "event.nCleaned_Cands{sys} > 100"
             ],
             "nconst_150" : [
-                "event.met_filter{sys}==1" ,
+                #"event.met_filter{sys}==1" ,
                 #"(event.HLT_PFHT1050{sys}==1) | (event.HLT_PFJet500{sys}==1)",
                 "event.nCleaned_Cands{sys} > 150"
             ],
             "nconst_175" : [
-                "event.met_filter{sys}==1" ,
+                #"event.met_filter{sys}==1" ,
                 #"(event.HLT_PFHT1050{sys}==1) | (event.HLT_PFJet500{sys}==1)",
                 "event.nCleaned_Cands{sys} > 175"
             ],
             "nconst_200" : [
-                "event.met_filter{sys}==1" ,
+                #"event.met_filter{sys}==1" ,
                 #"(event.HLT_PFHT1050{sys}==1) | (event.HLT_PFJet500{sys}==1)",
                 "event.nCleaned_Cands{sys} > 200"
             ],
             "nconst_250" : [
-                "event.met_filter{sys}==1" ,
+                #"event.met_filter{sys}==1" ,
                # "(event.HLT_PFHT1050{sys}==1) | (event.HLT_PFJet500{sys}==1)",
                 "event.nCleaned_Cands{sys} > 250"
             ],
