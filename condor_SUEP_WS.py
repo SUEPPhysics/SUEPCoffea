@@ -6,7 +6,7 @@ from coffea.processor import run_uproot_job, futures_executor
 from python.SUEP_Producer import *
 from python.SumWeights import *
 
-import uproot
+import uproot3 as uproot
 import argparse
 
 import time
@@ -58,10 +58,6 @@ if float(options.nevt) > 0:
     print((" passing this cut and : ", options.nevt))
     pre_selection += ' && (Entry$ < {})'.format(options.nevt)
 
-#pro_syst = ["ElectronEn", "MuonEn", "jesTotal", "jer"]
-#ext_syst = ["puWeight", "PDF", "MuonSF", "ElecronSF", "EWK", "nvtxWeight", "TriggerSFWeight", "btagEventWeight",
-#            "QCDScale0w", "QCDScale1w", "QCDScale2w"]
-
 pro_syst = []
 ext_syst = []
 
@@ -93,7 +89,7 @@ for i in modules_era:
 
 print("Selection : ", pre_selection)
 tstart = time.time()
-f = recreate("tree_%s_WS.root" % str(options.jobNum))
+f = uproot.recreate("tree_%s_WS.root" % str(options.jobNum))
 for instance in modules_era:
     output = run_uproot_job(
         {instance.sample: [options.infile]},
