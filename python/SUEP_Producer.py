@@ -4,7 +4,7 @@ Workspace producers using coffea.
 """
 from coffea.hist import Hist, Bin, export1d
 from coffea.processor import ProcessorABC, LazyDataFrame, dict_accumulator
-from uproot import recreate
+from uproot3 import recreate
 import numpy as np
 
 class WSProducer(ProcessorABC):
@@ -50,7 +50,7 @@ class WSProducer(ProcessorABC):
                 selec = self.passbut(df, hist['target'], region)
                 output[name].fill(**{
                     'weight': weight[selec],
-                    name: df[hist['target']][selec].flatten()
+                    name: df[hist['target']][selec]#.flatten()
                 })
 
         return output
