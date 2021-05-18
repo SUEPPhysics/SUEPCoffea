@@ -47,3 +47,8 @@ python merger.py
 - coffea
 - HTCondor cluster
 
+Alternatively, everything can be run through the docker container provided by the coffea team:
+/cvmfs/unpacked.cern.ch/registry.hub.docker.com/coffeateam/coffea-dask:latest
+
+Example commands shown above.
+
