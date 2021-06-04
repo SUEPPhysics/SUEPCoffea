@@ -63,14 +63,14 @@ ext_syst = []
 
 modules_era = []
 
-modules_era.append(SUEP_NTuple(isMC=options.isMC, era=int(options.era), do_syst=1, syst_var='', sample=options.dataset,
-                         haddFileName="tree_%s.root" % str(options.jobNum)))
+modules_era.append(SUEP_NTuple(isMC=options.isMC, era=int(options.era), do_syst=1, syst_var='', sample=options.dataset))#,
+#                         haddFileName="tree_%s.root" % str(options.jobNum)))
 if options.isMC and options.doSyst==1:
    for sys in pro_syst:
        for var in ["Up", "Down"]:
            modules_era.append(SUEP_NTuple(options.isMC, str(options.era), do_syst=1,
-                                    syst_var=sys + var, sample=options.dataset,
-                                    haddFileName=f"tree_{options.jobNum}_{sys}{var}.root"))
+                                    syst_var=sys + var, sample=options.dataset))#,
+#                                    haddFileName=f"tree_{options.jobNum}_{sys}{var}.root"))
    
    for sys in ext_syst:
        for var in ["Up", "Down"]:
@@ -79,8 +79,8 @@ if options.isMC and options.doSyst==1:
                    options.isMC, str(options.era),
                    do_syst=1, syst_var=sys + var,
                    weight_syst=True,
-                   sample=options.dataset,
-                   haddFileName=f"tree_{options.jobNum}_{sys}{var}.root",
+                   sample=options.dataset#,
+#                   haddFileName=f"tree_{options.jobNum}_{sys}{var}.root",
                )
            )
 
@@ -101,22 +101,23 @@ for instance in modules_era:
     )
     for h, hist in output.items():
         f[h] = export1d(hist)
-        print(f'wrote {h} to tree_{options.jobNum}_WS.root')
+        #print(f'wrote {h} to tree_{options.jobNum}_WS.root')
 
 modules_gensum = []
 
-modules_gensum.append(GenSumWeight(isMC=options.isMC, era=int(options.era), do_syst=1, syst_var='', sample=options.dataset,
-                         haddFileName="tree_%s.root" % str(options.jobNum)))
-
-for instance in modules_gensum:
-    output = run_uproot_job(
-        {instance.sample: [options.infile]},
-        treename='Runs',
-        processor_instance=instance,
-        executor=futures_executor,
-        executor_args={'workers': 10},
-        chunksize=500000
-    )
-    for h, hist in output.items():
-        f[h] = export1d(hist)
-        print(f'wrote {h} to tree_{options.jobNum}_WS.root')
+if options.isMC:
+    modules_gensum.append(GenSumWeight(isMC=options.isMC, era=int(options.era), do_syst=1, syst_var='', sample=options.dataset))#,
+    #                         haddFileName="tree_%s.root" % str(options.jobNum)))
+    
+    for instance in modules_gensum:
+        output = run_uproot_job(
+            {instance.sample: [options.infile]},
+            treename='Runs',
+            processor_instance=instance,
+            executor=futures_executor,
+            executor_args={'workers': 10},
+            chunksize=500000
+        )
+        for h, hist in output.items():
+            f[h] = export1d(hist)
+            #print(f'wrote {h} to tree_{options.jobNum}_WS.root')
