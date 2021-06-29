@@ -7,7 +7,7 @@ from coffea.processor import ProcessorABC, LazyDataFrame, dict_accumulator
 import awkward as ak
 from coffea.nanoevents import NanoEventsFactory, NanoAODSchema
 from coffea.nanoevents.methods import vector
-import uproot
+import uproot3 as uproot
 #from uproot3 import recreate
 import numpy as np
 import argparse

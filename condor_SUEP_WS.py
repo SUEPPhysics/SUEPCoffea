@@ -10,7 +10,7 @@ from python.Tracks import *
 
 #import uproot3 as uproot
 import argparse
-import uproot
+import uproot3 as uproot
 from coffea.hist import Hist, Bin, export1d
 from coffea.nanoevents import NanoEventsFactory, BaseSchema
 
@@ -33,8 +33,8 @@ options = parser.parse_args()
 #    print((" passing this cut and : ", options.nevt))
 #    pre_selection += ' && (Entry$ < {})'.format(options.nevt)
 
-uproot.open.defaults["xrootd_handler"] = uproot.source.xrootd.MultithreadedXRootDSource
-#file = uproot.open(options.infile)
+#uproot.open.defaults["xrootd_handler"] = uproot.source.xrootd.MultithreadedXRootDSource
+file = uproot.open(options.infile)
 #fileset = []
 #fileset.append(file)
 
