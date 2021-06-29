@@ -59,7 +59,7 @@ class SUEP_cluster(processor.ProcessorABC):
             fastjet_in = np.array(track_list, dtype=[('pT', 'f8'), ('eta', 'f8'), ('phi', 'f8'), ('mass', 'f8')])
             sequence = pyjet.cluster(fastjet_in, R=1.5, p=1) #p=-1,0,1 for anti-kt, aachen, and kt respectively
             fastjets = sequence.inclusive_jets(ptmin=3)
-            print(len(fastjets))
+            #print(len(fastjets))
         #sequence = pyjet.cluster(input_fastjet, R=1.5, p=1)
         #fastjets = sequence.inclusive_jets(ptmin=3)
         #jetdef = fastjet.JetDefinition(fastjet.antikt_algorithm, 0.6)

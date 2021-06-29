@@ -3,18 +3,13 @@ import re
 
 from coffea.processor import run_uproot_job, futures_executor
 
-#from python.SUEP_Producer import *
-#from python.SumWeights import *
-#from python.SUEP_Analysis import *
+#SUEP Repo Specific
 from python.Tracks import *
 
-#import uproot3 as uproot
 import argparse
 import uproot3 as uproot
 from coffea.hist import Hist, Bin, export1d
 from coffea.nanoevents import NanoEventsFactory, BaseSchema
-
-import time
 
 parser = argparse.ArgumentParser("")
 parser.add_argument('--isMC', type=int, default=1, help="")
@@ -27,21 +22,10 @@ parser.add_argument('--nevt', type=str, default=-1, help="")
 
 options = parser.parse_args()
 
-#pre_selection = ""
-
-#if float(options.nevt) > 0:
-#    print((" passing this cut and : ", options.nevt))
-#    pre_selection += ' && (Entry$ < {})'.format(options.nevt)
-
-#uproot.open.defaults["xrootd_handler"] = uproot.source.xrootd.MultithreadedXRootDSource
-file = uproot.open(options.infile)
-#fileset = []
-#fileset.append(file)
-
 fileset = {
         'files': [
         options.infile
-]
+        ]
 }
 
 modules_era = []
