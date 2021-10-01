@@ -26,233 +26,233 @@ python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys
 mv tree_1_WS.root GluGluHToZZTo4L_WS_selections.root
 echo "finished GluGluHToZZTo4L_M125_13TeV_powheg2_JHUgenV6_pythia8.root"
 
-python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-1000_narrow_13TeV-madgraph-v2.root
-mv tree_1_WS.root GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-1000_WS_selections.root
-echo "finished GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-1000_narrow_13TeV-madgraph-v2.root"
-
-python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-1250_narrow_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root
-mv tree_1_WS.root GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-1250_WS_selections.root
-echo "finished GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-1250_narrow_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root"
-
-python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-1500_narrow_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root
-mv tree_1_WS.root GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-1500_WS_selections.root
-echo "finished GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-1500_narrow_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root"
-
-python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-1750_narrow_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root
-mv tree_1_WS.root GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-1750_WS_selections.root
-echo "finished GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-1750_narrow_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root"
-
-python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-2000_narrow_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root
-mv tree_1_WS.root GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-2000_WS_selections.root
-echo "finished GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-2000_narrow_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root"
-
-python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-2500_narrow_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root
-mv tree_1_WS.root GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-2500_WS_selections.root
-echo "finished GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-2500_narrow_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root"
-
-python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-260_narrow_13TeV-madgraph-v2.root
-mv tree_1_WS.root GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-260_WS_selections.root
-echo "finished GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-260_narrow_13TeV-madgraph-v2.root"
-
-python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-270_narrow_13TeV-madgraph-v2.root
-mv tree_1_WS.root GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-270_WS_selections.root
-echo "finished GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-270_narrow_13TeV-madgraph-v2.root"
-
-python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-3000_narrow_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root
-mv tree_1_WS.root GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-3000_WS_selections.root
-echo "finished GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-3000_narrow_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root"
-
-python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-300_narrow_13TeV-madgraph-v2.root
-mv tree_1_WS.root GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-300_WS_selections.root
-echo "finished GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-300_narrow_13TeV-madgraph-v2.root"
-
-python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-350_narrow_13TeV-madgraph-v2.root
-mv tree_1_WS.root GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-350_WS_selections.root
-echo "finished GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-350_narrow_13TeV-madgraph-v2.root"
-
-python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-400_narrow_13TeV-madgraph-v2.root
-mv tree_1_WS.root GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-400_WS_selections.root
-echo "finished GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-400_narrow_13TeV-madgraph-v2.root"
-
-python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-450_narrow_13TeV-madgraph-v2.root
-mv tree_1_WS.root GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-450_WS_selections.root
-echo "finished GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-450_narrow_13TeV-madgraph-v2.root"
-
-python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-500_narrow_13TeV-madgraph-v2.root
-mv tree_1_WS.root GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-500_WS_selections.root
-echo "finished GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-500_narrow_13TeV-madgraph-v2.root"
-
-python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-550_narrow_13TeV-madgraph-v2.root
-mv tree_1_WS.root GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-550_WS_selections.root
-echo "finished GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-550_narrow_13TeV-madgraph-v2.root"
-
-python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-600_narrow_13TeV-madgraph-v2.root
-mv tree_1_WS.root GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-600_WS_selections.root
-echo "finished GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-600_narrow_13TeV-madgraph-v2.root"
-
-python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-650_narrow_13TeV-madgraph-v2.root
-mv tree_1_WS.root GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-650_WS_selections.root
-echo "finished GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-650_narrow_13TeV-madgraph-v2.root"
-
-python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-750_narrow_13TeV-madgraph-v2.root
-mv tree_1_WS.root GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-750_WS_selections.root
-echo "finished GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-750_narrow_13TeV-madgraph-v2.root"
-
-python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-800_narrow_13TeV-madgraph-v2.root
-mv tree_1_WS.root GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-800_WS_selections.root
-echo "finished GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-800_narrow_13TeV-madgraph-v2.root"
-
-python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-900_narrow_13TeV-madgraph-v2.root
-mv tree_1_WS.root GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-900_WS_selections.root
-echo "finished GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-900_narrow_13TeV-madgraph-v2.root"
-
-python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToHHTo2B2ZTo2L2J_node_10_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root
-mv tree_1_WS.root GluGluToHHTo2B2ZTo2L2J_node_10_WS_selections.root
-echo "finished GluGluToHHTo2B2ZTo2L2J_node_10_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root"
-
-python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToHHTo2B2ZTo2L2J_node_11_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root
-mv tree_1_WS.root GluGluToHHTo2B2ZTo2L2J_node_11_WS_selections.root
-echo "finished GluGluToHHTo2B2ZTo2L2J_node_11_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root"
-
-python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToHHTo2B2ZTo2L2J_node_12_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root
-mv tree_1_WS.root GluGluToHHTo2B2ZTo2L2J_node_12_WS_selections.root
-echo "finished GluGluToHHTo2B2ZTo2L2J_node_12_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root"
-
-python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToHHTo2B2ZTo2L2J_node_1_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root
-mv tree_1_WS.root GluGluToHHTo2B2ZTo2L2J_node_1_WS_selections.root
-echo "finished GluGluToHHTo2B2ZTo2L2J_node_1_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root"
-
-python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToHHTo2B2ZTo2L2J_node_2_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root
-mv tree_1_WS.root GluGluToHHTo2B2ZTo2L2J_node_2_WS_selections.root
-echo "finished GluGluToHHTo2B2ZTo2L2J_node_2_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root"
-
-python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToHHTo2B2ZTo2L2J_node_3_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root
-mv tree_1_WS.root GluGluToHHTo2B2ZTo2L2J_node_3_WS_selections.root
-echo "finished GluGluToHHTo2B2ZTo2L2J_node_3_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root"
-
-python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToHHTo2B2ZTo2L2J_node_4_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root
-mv tree_1_WS.root GluGluToHHTo2B2ZTo2L2J_node_4_WS_selections.root
-echo "finished GluGluToHHTo2B2ZTo2L2J_node_4_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root"
-
-python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToHHTo2B2ZTo2L2J_node_5_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root
-mv tree_1_WS.root GluGluToHHTo2B2ZTo2L2J_node_5_WS_selections.root
-echo "finished GluGluToHHTo2B2ZTo2L2J_node_5_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root"
-
-python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToHHTo2B2ZTo2L2J_node_6_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root
-mv tree_1_WS.root GluGluToHHTo2B2ZTo2L2J_node_6_WS_selections.root
-echo "finished GluGluToHHTo2B2ZTo2L2J_node_6_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root"
-
-python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToHHTo2B2ZTo2L2J_node_7_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root
-mv tree_1_WS.root GluGluToHHTo2B2ZTo2L2J_node_7_WS_selections.root
-echo "finished GluGluToHHTo2B2ZTo2L2J_node_7_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root"
-
-python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToHHTo2B2ZTo2L2J_node_8_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root
-mv tree_1_WS.root GluGluToHHTo2B2ZTo2L2J_node_8_WS_selections.root
-echo "finished GluGluToHHTo2B2ZTo2L2J_node_8_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root"
-
-python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToHHTo2B2ZTo2L2J_node_9_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root
-mv tree_1_WS.root GluGluToHHTo2B2ZTo2L2J_node_9_WS_selections.root
-echo "finished GluGluToHHTo2B2ZTo2L2J_node_9_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root"
-
-python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToHHTo2B2ZTo2L2J_node_SM_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root
-mv tree_1_WS.root GluGluToHHTo2B2ZTo2L2J_node_SM_WS_selections.root
-echo "finished GluGluToHHTo2B2ZTo2L2J_node_SM_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root"
-
-python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToHHTo2B2ZTo2L2J_node_cHHH0_TuneCUETP8M1_PSWeights_13TeV-powheg-pythia8.root
-mv tree_1_WS.root GluGluToHHTo2B2ZTo2L2J_node_cHHH0_WS_selections.root
-echo "finished GluGluToHHTo2B2ZTo2L2J_node_cHHH0_TuneCUETP8M1_PSWeights_13TeV-powheg-pythia8.root"
-
-python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToHHTo2B2ZTo2L2J_node_cHHH1_TuneCUETP8M1_PSWeights_13TeV-powheg-pythia8.root
-mv tree_1_WS.root GluGluToHHTo2B2ZTo2L2J_node_cHHH1_WS_selections.root
-echo "finished GluGluToHHTo2B2ZTo2L2J_node_cHHH1_TuneCUETP8M1_PSWeights_13TeV-powheg-pythia8.root"
-
-python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToHHTo2B2ZTo2L2J_node_cHHH2p45_TuneCUETP8M1_PSWeights_13TeV-powheg-pythia8.root
-mv tree_1_WS.root GluGluToHHTo2B2ZTo2L2J_node_cHHH2p45_WS_selections.root
-echo "finished GluGluToHHTo2B2ZTo2L2J_node_cHHH2p45_TuneCUETP8M1_PSWeights_13TeV-powheg-pythia8.root"
-
-python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToHHTo2B2ZTo2L2J_node_cHHH5_TuneCUETP8M1_PSWeights_13TeV-powheg-pythia8.root
-mv tree_1_WS.root GluGluToHHTo2B2ZTo2L2J_node_cHHH5_WS_selections.root
-echo "finished GluGluToHHTo2B2ZTo2L2J_node_cHHH5_TuneCUETP8M1_PSWeights_13TeV-powheg-pythia8.root"
-
-python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToRadionToHHTo2B2ZTo2L2J_M-1000_narrow_13TeV-madgraph-v2.root
-mv tree_1_WS.root GluGluToRadionToHHTo2B2ZTo2L2J_M-1000_WS_selections.root
-echo "finished GluGluToRadionToHHTo2B2ZTo2L2J_M-1000_narrow_13TeV-madgraph-v2.root"
-
-python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToRadionToHHTo2B2ZTo2L2J_M-1250_narrow_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root
-mv tree_1_WS.root GluGluToRadionToHHTo2B2ZTo2L2J_M-1250_WS_selections.root
-echo "finished GluGluToRadionToHHTo2B2ZTo2L2J_M-1250_narrow_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root"
-
-python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToRadionToHHTo2B2ZTo2L2J_M-1500_narrow_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root
-mv tree_1_WS.root GluGluToRadionToHHTo2B2ZTo2L2J_M-1500_WS_selections.root
-echo "finished GluGluToRadionToHHTo2B2ZTo2L2J_M-1500_narrow_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root"
-
-python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToRadionToHHTo2B2ZTo2L2J_M-1750_narrow_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root
-mv tree_1_WS.root GluGluToRadionToHHTo2B2ZTo2L2J_M-1750_WS_selections.root
-echo "finished GluGluToRadionToHHTo2B2ZTo2L2J_M-1750_narrow_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root"
-
-python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToRadionToHHTo2B2ZTo2L2J_M-2000_narrow_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root
-mv tree_1_WS.root GluGluToRadionToHHTo2B2ZTo2L2J_M-2000_WS_selections.root
-echo "finished GluGluToRadionToHHTo2B2ZTo2L2J_M-2000_narrow_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root"
-
-python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToRadionToHHTo2B2ZTo2L2J_M-2500_narrow_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root
-mv tree_1_WS.root GluGluToRadionToHHTo2B2ZTo2L2J_M-2500_WS_selections.root
-echo "finished GluGluToRadionToHHTo2B2ZTo2L2J_M-2500_narrow_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root"
-
-python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToRadionToHHTo2B2ZTo2L2J_M-260_narrow_13TeV-madgraph-v2.root
-mv tree_1_WS.root GluGluToRadionToHHTo2B2ZTo2L2J_M-260_WS_selections.root
-echo "finished GluGluToRadionToHHTo2B2ZTo2L2J_M-260_narrow_13TeV-madgraph-v2.root"
-
-python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToRadionToHHTo2B2ZTo2L2J_M-270_narrow_13TeV-madgraph-v2.root
-mv tree_1_WS.root GluGluToRadionToHHTo2B2ZTo2L2J_M-270_WS_selections.root
-echo "finished GluGluToRadionToHHTo2B2ZTo2L2J_M-270_narrow_13TeV-madgraph-v2.root"
-
-python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToRadionToHHTo2B2ZTo2L2J_M-3000_narrow_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root
-mv tree_1_WS.root GluGluToRadionToHHTo2B2ZTo2L2J_M-3000_WS_selections.root
-echo "finished GluGluToRadionToHHTo2B2ZTo2L2J_M-3000_narrow_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root"
-
-python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToRadionToHHTo2B2ZTo2L2J_M-300_narrow_13TeV-madgraph-v2.root
-mv tree_1_WS.root GluGluToRadionToHHTo2B2ZTo2L2J_M-300_WS_selections.root
-echo "finished GluGluToRadionToHHTo2B2ZTo2L2J_M-300_narrow_13TeV-madgraph-v2.root"
-
-python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToRadionToHHTo2B2ZTo2L2J_M-350_narrow_13TeV-madgraph-v2.root
-mv tree_1_WS.root GluGluToRadionToHHTo2B2ZTo2L2J_M-350_WS_selections.root
-echo "finished GluGluToRadionToHHTo2B2ZTo2L2J_M-350_narrow_13TeV-madgraph-v2.root"
-
-python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToRadionToHHTo2B2ZTo2L2J_M-400_narrow_13TeV-madgraph-v2.root
-mv tree_1_WS.root GluGluToRadionToHHTo2B2ZTo2L2J_M-400_WS_selections.root
-echo "finished GluGluToRadionToHHTo2B2ZTo2L2J_M-400_narrow_13TeV-madgraph-v2.root"
-
-python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToRadionToHHTo2B2ZTo2L2J_M-450_narrow_13TeV-madgraph-v2.root
-mv tree_1_WS.root GluGluToRadionToHHTo2B2ZTo2L2J_M-450_WS_selections.root
-echo "finished GluGluToRadionToHHTo2B2ZTo2L2J_M-450_narrow_13TeV-madgraph-v2.root"
-
-python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToRadionToHHTo2B2ZTo2L2J_M-500_narrow_13TeV-madgraph-v2.root
-mv tree_1_WS.root GluGluToRadionToHHTo2B2ZTo2L2J_M-500_WS_selections.root
-echo "finished GluGluToRadionToHHTo2B2ZTo2L2J_M-500_narrow_13TeV-madgraph-v2.root"
-
-python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToRadionToHHTo2B2ZTo2L2J_M-550_narrow_13TeV-madgraph-v2.root
-mv tree_1_WS.root GluGluToRadionToHHTo2B2ZTo2L2J_M-550_WS_selections.root
-echo "finished GluGluToRadionToHHTo2B2ZTo2L2J_M-550_narrow_13TeV-madgraph-v2.root"
-
-python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToRadionToHHTo2B2ZTo2L2J_M-600_narrow_13TeV-madgraph-v2.root
-mv tree_1_WS.root GluGluToRadionToHHTo2B2ZTo2L2J_M-600_WS_selections.root
-echo "finished GluGluToRadionToHHTo2B2ZTo2L2J_M-600_narrow_13TeV-madgraph-v2.root"
-
-python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToRadionToHHTo2B2ZTo2L2J_M-650_narrow_13TeV-madgraph-v2.root
-mv tree_1_WS.root GluGluToRadionToHHTo2B2ZTo2L2J_M-650_WS_selections.root
-echo "finished GluGluToRadionToHHTo2B2ZTo2L2J_M-650_narrow_13TeV-madgraph-v2.root"
-
-python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToRadionToHHTo2B2ZTo2L2J_M-750_narrow_13TeV-madgraph-v2.root
-mv tree_1_WS.root GluGluToRadionToHHTo2B2ZTo2L2J_M-750_WS_selections.root
-echo "finished GluGluToRadionToHHTo2B2ZTo2L2J_M-750_narrow_13TeV-madgraph-v2.root"
-
-python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToRadionToHHTo2B2ZTo2L2J_M-800_narrow_13TeV-madgraph-v2.root
-mv tree_1_WS.root GluGluToRadionToHHTo2B2ZTo2L2J_M-800_WS_selections.root
-echo "finished GluGluToRadionToHHTo2B2ZTo2L2J_M-800_narrow_13TeV-madgraph-v2.root"
-
-python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToRadionToHHTo2B2ZTo2L2J_M-900_narrow_13TeV-madgraph-v2.root
-mv tree_1_WS.root GluGluToRadionToHHTo2B2ZTo2L2J_M-900_WS_selections.root
-echo "finished GluGluToRadionToHHTo2B2ZTo2L2J_M-900_narrow_13TeV-madgraph-v2.root"
+#python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-1000_narrow_13TeV-madgraph-v2.root
+#mv tree_1_WS.root GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-1000_WS_selections.root
+#echo "finished GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-1000_narrow_13TeV-madgraph-v2.root"
+#
+#python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-1250_narrow_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root
+#mv tree_1_WS.root GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-1250_WS_selections.root
+#echo "finished GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-1250_narrow_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root"
+#
+#python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-1500_narrow_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root
+#mv tree_1_WS.root GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-1500_WS_selections.root
+#echo "finished GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-1500_narrow_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root"
+#
+#python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-1750_narrow_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root
+#mv tree_1_WS.root GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-1750_WS_selections.root
+#echo "finished GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-1750_narrow_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root"
+#
+#python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-2000_narrow_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root
+#mv tree_1_WS.root GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-2000_WS_selections.root
+#echo "finished GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-2000_narrow_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root"
+#
+#python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-2500_narrow_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root
+#mv tree_1_WS.root GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-2500_WS_selections.root
+#echo "finished GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-2500_narrow_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root"
+#
+#python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-260_narrow_13TeV-madgraph-v2.root
+#mv tree_1_WS.root GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-260_WS_selections.root
+#echo "finished GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-260_narrow_13TeV-madgraph-v2.root"
+#
+#python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-270_narrow_13TeV-madgraph-v2.root
+#mv tree_1_WS.root GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-270_WS_selections.root
+#echo "finished GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-270_narrow_13TeV-madgraph-v2.root"
+#
+#python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-3000_narrow_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root
+#mv tree_1_WS.root GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-3000_WS_selections.root
+#echo "finished GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-3000_narrow_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root"
+#
+#python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-300_narrow_13TeV-madgraph-v2.root
+#mv tree_1_WS.root GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-300_WS_selections.root
+#echo "finished GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-300_narrow_13TeV-madgraph-v2.root"
+#
+#python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-350_narrow_13TeV-madgraph-v2.root
+#mv tree_1_WS.root GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-350_WS_selections.root
+#echo "finished GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-350_narrow_13TeV-madgraph-v2.root"
+#
+#python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-400_narrow_13TeV-madgraph-v2.root
+#mv tree_1_WS.root GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-400_WS_selections.root
+#echo "finished GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-400_narrow_13TeV-madgraph-v2.root"
+#
+#python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-450_narrow_13TeV-madgraph-v2.root
+#mv tree_1_WS.root GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-450_WS_selections.root
+#echo "finished GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-450_narrow_13TeV-madgraph-v2.root"
+#
+#python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-500_narrow_13TeV-madgraph-v2.root
+#mv tree_1_WS.root GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-500_WS_selections.root
+#echo "finished GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-500_narrow_13TeV-madgraph-v2.root"
+#
+#python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-550_narrow_13TeV-madgraph-v2.root
+#mv tree_1_WS.root GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-550_WS_selections.root
+#echo "finished GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-550_narrow_13TeV-madgraph-v2.root"
+#
+#python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-600_narrow_13TeV-madgraph-v2.root
+#mv tree_1_WS.root GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-600_WS_selections.root
+#echo "finished GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-600_narrow_13TeV-madgraph-v2.root"
+#
+#python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-650_narrow_13TeV-madgraph-v2.root
+#mv tree_1_WS.root GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-650_WS_selections.root
+#echo "finished GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-650_narrow_13TeV-madgraph-v2.root"
+#
+#python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-750_narrow_13TeV-madgraph-v2.root
+#mv tree_1_WS.root GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-750_WS_selections.root
+#echo "finished GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-750_narrow_13TeV-madgraph-v2.root"
+#
+#python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-800_narrow_13TeV-madgraph-v2.root
+#mv tree_1_WS.root GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-800_WS_selections.root
+#echo "finished GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-800_narrow_13TeV-madgraph-v2.root"
+#
+#python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-900_narrow_13TeV-madgraph-v2.root
+#mv tree_1_WS.root GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-900_WS_selections.root
+#echo "finished GluGluToBulkGravitonToHHTo2B2ZTo2L2J_M-900_narrow_13TeV-madgraph-v2.root"
+#
+#python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToHHTo2B2ZTo2L2J_node_10_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root
+#mv tree_1_WS.root GluGluToHHTo2B2ZTo2L2J_node_10_WS_selections.root
+#echo "finished GluGluToHHTo2B2ZTo2L2J_node_10_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root"
+#
+#python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToHHTo2B2ZTo2L2J_node_11_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root
+#mv tree_1_WS.root GluGluToHHTo2B2ZTo2L2J_node_11_WS_selections.root
+#echo "finished GluGluToHHTo2B2ZTo2L2J_node_11_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root"
+#
+#python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToHHTo2B2ZTo2L2J_node_12_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root
+#mv tree_1_WS.root GluGluToHHTo2B2ZTo2L2J_node_12_WS_selections.root
+#echo "finished GluGluToHHTo2B2ZTo2L2J_node_12_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root"
+#
+#python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToHHTo2B2ZTo2L2J_node_1_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root
+#mv tree_1_WS.root GluGluToHHTo2B2ZTo2L2J_node_1_WS_selections.root
+#echo "finished GluGluToHHTo2B2ZTo2L2J_node_1_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root"
+#
+#python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToHHTo2B2ZTo2L2J_node_2_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root
+#mv tree_1_WS.root GluGluToHHTo2B2ZTo2L2J_node_2_WS_selections.root
+#echo "finished GluGluToHHTo2B2ZTo2L2J_node_2_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root"
+#
+#python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToHHTo2B2ZTo2L2J_node_3_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root
+#mv tree_1_WS.root GluGluToHHTo2B2ZTo2L2J_node_3_WS_selections.root
+#echo "finished GluGluToHHTo2B2ZTo2L2J_node_3_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root"
+#
+#python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToHHTo2B2ZTo2L2J_node_4_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root
+#mv tree_1_WS.root GluGluToHHTo2B2ZTo2L2J_node_4_WS_selections.root
+#echo "finished GluGluToHHTo2B2ZTo2L2J_node_4_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root"
+#
+#python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToHHTo2B2ZTo2L2J_node_5_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root
+#mv tree_1_WS.root GluGluToHHTo2B2ZTo2L2J_node_5_WS_selections.root
+#echo "finished GluGluToHHTo2B2ZTo2L2J_node_5_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root"
+#
+#python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToHHTo2B2ZTo2L2J_node_6_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root
+#mv tree_1_WS.root GluGluToHHTo2B2ZTo2L2J_node_6_WS_selections.root
+#echo "finished GluGluToHHTo2B2ZTo2L2J_node_6_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root"
+#
+#python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToHHTo2B2ZTo2L2J_node_7_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root
+#mv tree_1_WS.root GluGluToHHTo2B2ZTo2L2J_node_7_WS_selections.root
+#echo "finished GluGluToHHTo2B2ZTo2L2J_node_7_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root"
+#
+#python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToHHTo2B2ZTo2L2J_node_8_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root
+#mv tree_1_WS.root GluGluToHHTo2B2ZTo2L2J_node_8_WS_selections.root
+#echo "finished GluGluToHHTo2B2ZTo2L2J_node_8_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root"
+#
+#python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToHHTo2B2ZTo2L2J_node_9_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root
+#mv tree_1_WS.root GluGluToHHTo2B2ZTo2L2J_node_9_WS_selections.root
+#echo "finished GluGluToHHTo2B2ZTo2L2J_node_9_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root"
+#
+#python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToHHTo2B2ZTo2L2J_node_SM_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root
+#mv tree_1_WS.root GluGluToHHTo2B2ZTo2L2J_node_SM_WS_selections.root
+#echo "finished GluGluToHHTo2B2ZTo2L2J_node_SM_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root"
+#
+#python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToHHTo2B2ZTo2L2J_node_cHHH0_TuneCUETP8M1_PSWeights_13TeV-powheg-pythia8.root
+#mv tree_1_WS.root GluGluToHHTo2B2ZTo2L2J_node_cHHH0_WS_selections.root
+#echo "finished GluGluToHHTo2B2ZTo2L2J_node_cHHH0_TuneCUETP8M1_PSWeights_13TeV-powheg-pythia8.root"
+#
+#python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToHHTo2B2ZTo2L2J_node_cHHH1_TuneCUETP8M1_PSWeights_13TeV-powheg-pythia8.root
+#mv tree_1_WS.root GluGluToHHTo2B2ZTo2L2J_node_cHHH1_WS_selections.root
+#echo "finished GluGluToHHTo2B2ZTo2L2J_node_cHHH1_TuneCUETP8M1_PSWeights_13TeV-powheg-pythia8.root"
+#
+#python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToHHTo2B2ZTo2L2J_node_cHHH2p45_TuneCUETP8M1_PSWeights_13TeV-powheg-pythia8.root
+#mv tree_1_WS.root GluGluToHHTo2B2ZTo2L2J_node_cHHH2p45_WS_selections.root
+#echo "finished GluGluToHHTo2B2ZTo2L2J_node_cHHH2p45_TuneCUETP8M1_PSWeights_13TeV-powheg-pythia8.root"
+#
+#python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToHHTo2B2ZTo2L2J_node_cHHH5_TuneCUETP8M1_PSWeights_13TeV-powheg-pythia8.root
+#mv tree_1_WS.root GluGluToHHTo2B2ZTo2L2J_node_cHHH5_WS_selections.root
+#echo "finished GluGluToHHTo2B2ZTo2L2J_node_cHHH5_TuneCUETP8M1_PSWeights_13TeV-powheg-pythia8.root"
+#
+#python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToRadionToHHTo2B2ZTo2L2J_M-1000_narrow_13TeV-madgraph-v2.root
+#mv tree_1_WS.root GluGluToRadionToHHTo2B2ZTo2L2J_M-1000_WS_selections.root
+#echo "finished GluGluToRadionToHHTo2B2ZTo2L2J_M-1000_narrow_13TeV-madgraph-v2.root"
+#
+#python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToRadionToHHTo2B2ZTo2L2J_M-1250_narrow_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root
+#mv tree_1_WS.root GluGluToRadionToHHTo2B2ZTo2L2J_M-1250_WS_selections.root
+#echo "finished GluGluToRadionToHHTo2B2ZTo2L2J_M-1250_narrow_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root"
+#
+#python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToRadionToHHTo2B2ZTo2L2J_M-1500_narrow_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root
+#mv tree_1_WS.root GluGluToRadionToHHTo2B2ZTo2L2J_M-1500_WS_selections.root
+#echo "finished GluGluToRadionToHHTo2B2ZTo2L2J_M-1500_narrow_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root"
+#
+#python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToRadionToHHTo2B2ZTo2L2J_M-1750_narrow_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root
+#mv tree_1_WS.root GluGluToRadionToHHTo2B2ZTo2L2J_M-1750_WS_selections.root
+#echo "finished GluGluToRadionToHHTo2B2ZTo2L2J_M-1750_narrow_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root"
+#
+#python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToRadionToHHTo2B2ZTo2L2J_M-2000_narrow_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root
+#mv tree_1_WS.root GluGluToRadionToHHTo2B2ZTo2L2J_M-2000_WS_selections.root
+#echo "finished GluGluToRadionToHHTo2B2ZTo2L2J_M-2000_narrow_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root"
+#
+#python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToRadionToHHTo2B2ZTo2L2J_M-2500_narrow_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root
+#mv tree_1_WS.root GluGluToRadionToHHTo2B2ZTo2L2J_M-2500_WS_selections.root
+#echo "finished GluGluToRadionToHHTo2B2ZTo2L2J_M-2500_narrow_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root"
+#
+#python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToRadionToHHTo2B2ZTo2L2J_M-260_narrow_13TeV-madgraph-v2.root
+#mv tree_1_WS.root GluGluToRadionToHHTo2B2ZTo2L2J_M-260_WS_selections.root
+#echo "finished GluGluToRadionToHHTo2B2ZTo2L2J_M-260_narrow_13TeV-madgraph-v2.root"
+#
+#python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToRadionToHHTo2B2ZTo2L2J_M-270_narrow_13TeV-madgraph-v2.root
+#mv tree_1_WS.root GluGluToRadionToHHTo2B2ZTo2L2J_M-270_WS_selections.root
+#echo "finished GluGluToRadionToHHTo2B2ZTo2L2J_M-270_narrow_13TeV-madgraph-v2.root"
+#
+#python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToRadionToHHTo2B2ZTo2L2J_M-3000_narrow_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root
+#mv tree_1_WS.root GluGluToRadionToHHTo2B2ZTo2L2J_M-3000_WS_selections.root
+#echo "finished GluGluToRadionToHHTo2B2ZTo2L2J_M-3000_narrow_TuneCUETP8M1_PSWeights_13TeV-madgraph-pythia8.root"
+#
+#python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToRadionToHHTo2B2ZTo2L2J_M-300_narrow_13TeV-madgraph-v2.root
+#mv tree_1_WS.root GluGluToRadionToHHTo2B2ZTo2L2J_M-300_WS_selections.root
+#echo "finished GluGluToRadionToHHTo2B2ZTo2L2J_M-300_narrow_13TeV-madgraph-v2.root"
+#
+#python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToRadionToHHTo2B2ZTo2L2J_M-350_narrow_13TeV-madgraph-v2.root
+#mv tree_1_WS.root GluGluToRadionToHHTo2B2ZTo2L2J_M-350_WS_selections.root
+#echo "finished GluGluToRadionToHHTo2B2ZTo2L2J_M-350_narrow_13TeV-madgraph-v2.root"
+#
+#python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToRadionToHHTo2B2ZTo2L2J_M-400_narrow_13TeV-madgraph-v2.root
+#mv tree_1_WS.root GluGluToRadionToHHTo2B2ZTo2L2J_M-400_WS_selections.root
+#echo "finished GluGluToRadionToHHTo2B2ZTo2L2J_M-400_narrow_13TeV-madgraph-v2.root"
+#
+#python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToRadionToHHTo2B2ZTo2L2J_M-450_narrow_13TeV-madgraph-v2.root
+#mv tree_1_WS.root GluGluToRadionToHHTo2B2ZTo2L2J_M-450_WS_selections.root
+#echo "finished GluGluToRadionToHHTo2B2ZTo2L2J_M-450_narrow_13TeV-madgraph-v2.root"
+#
+#python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToRadionToHHTo2B2ZTo2L2J_M-500_narrow_13TeV-madgraph-v2.root
+#mv tree_1_WS.root GluGluToRadionToHHTo2B2ZTo2L2J_M-500_WS_selections.root
+#echo "finished GluGluToRadionToHHTo2B2ZTo2L2J_M-500_narrow_13TeV-madgraph-v2.root"
+#
+#python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToRadionToHHTo2B2ZTo2L2J_M-550_narrow_13TeV-madgraph-v2.root
+#mv tree_1_WS.root GluGluToRadionToHHTo2B2ZTo2L2J_M-550_WS_selections.root
+#echo "finished GluGluToRadionToHHTo2B2ZTo2L2J_M-550_narrow_13TeV-madgraph-v2.root"
+#
+#python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToRadionToHHTo2B2ZTo2L2J_M-600_narrow_13TeV-madgraph-v2.root
+#mv tree_1_WS.root GluGluToRadionToHHTo2B2ZTo2L2J_M-600_WS_selections.root
+#echo "finished GluGluToRadionToHHTo2B2ZTo2L2J_M-600_narrow_13TeV-madgraph-v2.root"
+#
+#python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToRadionToHHTo2B2ZTo2L2J_M-650_narrow_13TeV-madgraph-v2.root
+#mv tree_1_WS.root GluGluToRadionToHHTo2B2ZTo2L2J_M-650_WS_selections.root
+#echo "finished GluGluToRadionToHHTo2B2ZTo2L2J_M-650_narrow_13TeV-madgraph-v2.root"
+#
+#python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToRadionToHHTo2B2ZTo2L2J_M-750_narrow_13TeV-madgraph-v2.root
+#mv tree_1_WS.root GluGluToRadionToHHTo2B2ZTo2L2J_M-750_WS_selections.root
+#echo "finished GluGluToRadionToHHTo2B2ZTo2L2J_M-750_narrow_13TeV-madgraph-v2.root"
+#
+#python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToRadionToHHTo2B2ZTo2L2J_M-800_narrow_13TeV-madgraph-v2.root
+#mv tree_1_WS.root GluGluToRadionToHHTo2B2ZTo2L2J_M-800_WS_selections.root
+#echo "finished GluGluToRadionToHHTo2B2ZTo2L2J_M-800_narrow_13TeV-madgraph-v2.root"
+#
+#python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluToRadionToHHTo2B2ZTo2L2J_M-900_narrow_13TeV-madgraph-v2.root
+#mv tree_1_WS.root GluGluToRadionToHHTo2B2ZTo2L2J_M-900_WS_selections.root
+#echo "finished GluGluToRadionToHHTo2B2ZTo2L2J_M-900_narrow_13TeV-madgraph-v2.root"
 
 python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/GluGluZH_HToWW_M125_13TeV_powheg_pythia8.root
 mv tree_1_WS.root GluGluZH_HToWW_WS_selections.root
@@ -298,29 +298,29 @@ python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys
 mv tree_1_WS.root TT_WS_selections.root
 echo "finished TT_TuneCUETP8M2T4_13TeV-powheg-pythia8.root"
 
-python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/VBFHHTo2B2ZTo2L2J_CV_1_5_C2V_1_C3_1_dipoleRecoilOff-TuneCUETP8M1_PSweights_13TeV-madgraph-pythia8.root
-mv tree_1_WS.root VBFHHTo2B2ZTo2L2J_CV_1_5_C2V_1_C3_1_WS_selections.root
-echo "finished VBFHHTo2B2ZTo2L2J_CV_1_5_C2V_1_C3_1_dipoleRecoilOff-TuneCUETP8M1_PSweights_13TeV-madgraph-pythia8.root"
-
-python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/VBFHHTo2B2ZTo2L2J_CV_1_C2V_0_C3_1_dipoleRecoilOff-TuneCUETP8M1_PSweights_13TeV-madgraph-pythia8.root
-mv tree_1_WS.root VBFHHTo2B2ZTo2L2J_CV_1_C2V_0_C3_1_WS_selections.root
-echo "finished VBFHHTo2B2ZTo2L2J_CV_1_C2V_0_C3_1_dipoleRecoilOff-TuneCUETP8M1_PSweights_13TeV-madgraph-pythia8.root"
-
-python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/VBFHHTo2B2ZTo2L2J_CV_1_C2V_1_C3_0_dipoleRecoilOff-TuneCUETP8M1_PSweights_13TeV-madgraph-pythia8.root
-mv tree_1_WS.root VBFHHTo2B2ZTo2L2J_CV_1_C2V_1_C3_0_WS_selections.root
-echo "finished VBFHHTo2B2ZTo2L2J_CV_1_C2V_1_C3_0_dipoleRecoilOff-TuneCUETP8M1_PSweights_13TeV-madgraph-pythia8.root"
-
-python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/VBFHHTo2B2ZTo2L2J_CV_1_C2V_1_C3_1_dipoleRecoilOff-TuneCUETP8M1_PSweights_13TeV-madgraph-pythia8.root
-mv tree_1_WS.root VBFHHTo2B2ZTo2L2J_CV_1_C2V_1_C3_1_WS_selections.root
-echo "finished VBFHHTo2B2ZTo2L2J_CV_1_C2V_1_C3_1_dipoleRecoilOff-TuneCUETP8M1_PSweights_13TeV-madgraph-pythia8.root"
-
-python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/VBFHHTo2B2ZTo2L2J_CV_1_C2V_1_C3_2_dipoleRecoilOff-TuneCUETP8M1_PSweights_13TeV-madgraph-pythia8.root
-mv tree_1_WS.root VBFHHTo2B2ZTo2L2J_CV_1_C2V_1_C3_2_WS_selections.root
-echo "finished VBFHHTo2B2ZTo2L2J_CV_1_C2V_1_C3_2_dipoleRecoilOff-TuneCUETP8M1_PSweights_13TeV-madgraph-pythia8.root"
-
-python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/VBFHHTo2B2ZTo2L2J_CV_1_C2V_2_C3_1_dipoleRecoilOff-TuneCUETP8M1_PSweights_13TeV-madgraph-pythia8.root
-mv tree_1_WS.root VBFHHTo2B2ZTo2L2J_CV_1_C2V_2_C3_1_WS_selections.root
-echo "finished VBFHHTo2B2ZTo2L2J_CV_1_C2V_2_C3_1_dipoleRecoilOff-TuneCUETP8M1_PSweights_13TeV-madgraph-pythia8.root"
+#python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/VBFHHTo2B2ZTo2L2J_CV_1_5_C2V_1_C3_1_dipoleRecoilOff-TuneCUETP8M1_PSweights_13TeV-madgraph-pythia8.root
+#mv tree_1_WS.root VBFHHTo2B2ZTo2L2J_CV_1_5_C2V_1_C3_1_WS_selections.root
+#echo "finished VBFHHTo2B2ZTo2L2J_CV_1_5_C2V_1_C3_1_dipoleRecoilOff-TuneCUETP8M1_PSweights_13TeV-madgraph-pythia8.root"
+#
+#python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/VBFHHTo2B2ZTo2L2J_CV_1_C2V_0_C3_1_dipoleRecoilOff-TuneCUETP8M1_PSweights_13TeV-madgraph-pythia8.root
+#mv tree_1_WS.root VBFHHTo2B2ZTo2L2J_CV_1_C2V_0_C3_1_WS_selections.root
+#echo "finished VBFHHTo2B2ZTo2L2J_CV_1_C2V_0_C3_1_dipoleRecoilOff-TuneCUETP8M1_PSweights_13TeV-madgraph-pythia8.root"
+#
+#python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/VBFHHTo2B2ZTo2L2J_CV_1_C2V_1_C3_0_dipoleRecoilOff-TuneCUETP8M1_PSweights_13TeV-madgraph-pythia8.root
+#mv tree_1_WS.root VBFHHTo2B2ZTo2L2J_CV_1_C2V_1_C3_0_WS_selections.root
+#echo "finished VBFHHTo2B2ZTo2L2J_CV_1_C2V_1_C3_0_dipoleRecoilOff-TuneCUETP8M1_PSweights_13TeV-madgraph-pythia8.root"
+#
+#python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/VBFHHTo2B2ZTo2L2J_CV_1_C2V_1_C3_1_dipoleRecoilOff-TuneCUETP8M1_PSweights_13TeV-madgraph-pythia8.root
+#mv tree_1_WS.root VBFHHTo2B2ZTo2L2J_CV_1_C2V_1_C3_1_WS_selections.root
+#echo "finished VBFHHTo2B2ZTo2L2J_CV_1_C2V_1_C3_1_dipoleRecoilOff-TuneCUETP8M1_PSweights_13TeV-madgraph-pythia8.root"
+#
+#python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/VBFHHTo2B2ZTo2L2J_CV_1_C2V_1_C3_2_dipoleRecoilOff-TuneCUETP8M1_PSweights_13TeV-madgraph-pythia8.root
+#mv tree_1_WS.root VBFHHTo2B2ZTo2L2J_CV_1_C2V_1_C3_2_WS_selections.root
+#echo "finished VBFHHTo2B2ZTo2L2J_CV_1_C2V_1_C3_2_dipoleRecoilOff-TuneCUETP8M1_PSweights_13TeV-madgraph-pythia8.root"
+#
+#python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/VBFHHTo2B2ZTo2L2J_CV_1_C2V_2_C3_1_dipoleRecoilOff-TuneCUETP8M1_PSweights_13TeV-madgraph-pythia8.root
+#mv tree_1_WS.root VBFHHTo2B2ZTo2L2J_CV_1_C2V_2_C3_1_WS_selections.root
+#echo "finished VBFHHTo2B2ZTo2L2J_CV_1_C2V_2_C3_1_dipoleRecoilOff-TuneCUETP8M1_PSweights_13TeV-madgraph-pythia8.root"
 
 python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/VBFHToBB_M-125_13TeV_powheg_pythia8_weightfix.root
 mv tree_1_WS.root VBFHToBB_WS_selections.root
@@ -429,3 +429,68 @@ echo "finished ttHToNonbb_M125_TuneCP5_13TeV-powheg-pythia8.root"
 python3 condor_SUEP_WS.py --isMC=1 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/ttHTobb_M125_TuneCP5_13TeV-powheg-pythia8.root
 mv tree_1_WS.root ttHTobb_WS_selections.root
 echo "finished ttHTobb_M125_TuneCP5_13TeV-powheg-pythia8.root"
+
+python3 condor_SUEP_WS.py --isMC=0 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/DoubleMuon_Run2016B-02Apr2020_ver2-v1.root
+mv tree_1_WS.root DoubleMuon_Run2016B_WS_selections.root
+echo "finished DoubleMuon_Run2016B-02Apr2020_ver2-v1.root"
+
+python3 condor_SUEP_WS.py --isMC=0 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/DoubleMuon_Run2016C-02Apr2020-v1.root
+mv tree_1_WS.root DoubleMuon_Run2016C_WS_selections.root
+echo "finished DoubleMuon_Run2016C-02Apr2020-v1.root"
+
+python3 condor_SUEP_WS.py --isMC=0 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/DoubleMuon_Run2016D-02Apr2020-v1.root
+mv tree_1_WS.root DoubleMuon_Run2016D_WS_selections.root
+echo "finished DoubleMuon_Run2016D-02Apr2020-v1.root"
+
+python3 condor_SUEP_WS.py --isMC=0 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/DoubleMuon_Run2016E-02Apr2020-v1.root
+mv tree_1_WS.root DoubleMuon_Run2016E_WS_selections.root
+echo "finished DoubleMuon_Run2016E-02Apr2020-v1.root"
+
+python3 condor_SUEP_WS.py --isMC=0 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/DoubleMuon_Run2016F-02Apr2020-v1.root
+mv tree_1_WS.root DoubleMuon_Run2016F_WS_selections.root
+echo "finished DoubleMuon_Run2016F-02Apr2020-v1.root"
+
+python3 condor_SUEP_WS.py --isMC=0 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/DoubleMuon_Run2016G-02Apr2020-v1.root
+mv tree_1_WS.root DoubleMuon_Run2016G_WS_selections.root
+echo "finished DoubleMuon_Run2016G-02Apr2020-v1.root"
+
+python3 condor_SUEP_WS.py --isMC=0 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/DoubleMuon_Run2016H-02Apr2020-v1.root
+mv tree_1_WS.root DoubleMuon_Run2016H_WS_selections.root
+echo "finished DoubleMuon_Run2016H-02Apr2020-v1.root"
+
+python3 condor_SUEP_WS.py --isMC=0 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/DoubleEG_Run2016B-02Apr2020_ver2-v1.root
+mv tree_1_WS.root DoubleEG_Run2016B_WS_selections.root
+echo "finished DoubleEG_Run2016B-02Apr2020_ver2-v1.root"
+
+python3 condor_SUEP_WS.py --isMC=0 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/DoubleEG_Run2016C-02Apr2020-v1.root
+mv tree_1_WS.root DoubleEG_Run2016C_WS_selections.root
+echo "finished DoubleEG_Run2016C-02Apr2020-v1.root"
+
+python3 condor_SUEP_WS.py --isMC=0 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/DoubleEG_Run2016D-02Apr2020-v1.root
+mv tree_1_WS.root DoubleEG_Run2016D_WS_selections.root
+echo "finished DoubleEG_Run2016D-02Apr2020-v1.root"
+
+python3 condor_SUEP_WS.py --isMC=0 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/DoubleEG_Run2016E-02Apr2020-v1.root
+mv tree_1_WS.root DoubleEG_Run2016E_WS_selections.root
+echo "finished DoubleEG_Run2016E-02Apr2020-v1.root"
+
+python3 condor_SUEP_WS.py --isMC=0 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/DoubleEG_Run2016F-02Apr2020-v1.root
+mv tree_1_WS.root DoubleEG_Run2016F_WS_selections.root
+echo "finished DoubleEG_Run2016F-02Apr2020-v1.root"
+
+python3 condor_SUEP_WS.py --isMC=0 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/DoubleEG_Run2016G-02Apr2020-v1.root
+mv tree_1_WS.root DoubleEG_Run2016G_WS_selections.root
+echo "finished DoubleEG_Run2016G-02Apr2020-v1.root"
+
+python3 condor_SUEP_WS.py --isMC=0 --era=2016 --infile=/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged/DoubleEG_Run2016H-02Apr2020-v1.root
+mv tree_1_WS.root DoubleEG_Run2016H_WS_selections.root
+echo "finished DoubleEG_Run2016H-02Apr2020-v1.root"
+
+
+
+
+
+
+
+
+
