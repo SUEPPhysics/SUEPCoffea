@@ -28,27 +28,16 @@ If there are files in other folders that are necessary (The folder with your NTu
 export SINGULARITY_BIND="/mnt"
 ```
 
-## To run on many files
-```bash
-To be set up
+## Manually control condor jobs rather than Dask
+
+The kraken_run.py file which will submit Condor jobs for all the files in specified datasets. This submission currenty uses xrdfs to find the files stored on Kraken. An example submission can be seen below:
+
 ```
-## to merge the output
-
-Once everything is run we will want to merge all the output files into a single file per sample. This can be done with the merger.py file. Simply update the directory names at the top of this file and then run it:
-
-```bash
-python merger.py
+python kraken_run.py --isMC=1 --era=2018 --tag=<tag name> --input=filelist/list_2018_MC.txt 
 ```
+The submission will name a directory in the output directory after the tage name you input. If the tag already exists use the ```--force``` option if you are trying to resubmit/overwrite.
 
-## Requirements
+Note that this submission will look for the dataset xsec in xsections_<era>.yaml.
+  
 
-- Python 3
-- uproot
-- coffea
-- HTCondor cluster
-
-Alternatively, everything can be run through the docker container provided by the coffea team:
-/cvmfs/unpacked.cern.ch/registry.hub.docker.com/coffeateam/coffea-dask:latest
-
-Example commands shown above.
 
