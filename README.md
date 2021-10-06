@@ -27,17 +27,3 @@ If there are files in other folders that are necessary (The folder with your NTu
 ```bash
 export SINGULARITY_BIND="/mnt"
 ```
-
-## Manually control condor jobs rather than Dask
-
-The kraken_run.py file which will submit Condor jobs for all the files in specified datasets. This submission currenty uses xrdfs to find the files stored on Kraken. An example submission can be seen below:
-
-```
-python kraken_run.py --isMC=1 --era=2018 --tag=<tag name> --input=filelist/list_2018_MC.txt 
-```
-The submission will name a directory in the output directory after the tage name you input. If the tag already exists use the ```--force``` option if you are trying to resubmit/overwrite.
-
-Note that this submission will look for the dataset xsec in xsections_<era>.yaml.
-  
-
-
