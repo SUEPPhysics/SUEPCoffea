@@ -64,6 +64,24 @@ class WSProducer(ProcessorABC):
 
 class SUEP_NTuple(WSProducer):
     histograms = {
+        'Zlep_cand_mass_QCD_B': {
+            'target': 'Zlep_cand_mass',
+            'name'  : 'Zlep_cand_mass_QCD_B',  # name to write to histogram
+            'region': ['QCD_B'],
+            'axis': {'label': 'Zlep_cand_mass', 'n_or_arr': 70, 'lo': 0, 'hi': 700}
+        },
+        'Zlep_cand_mass_QCD_C': {
+            'target': 'Zlep_cand_mass',
+            'name'  : 'Zlep_cand_mass_QCD_C',  # name to write to histogram
+            'region': ['QCD_C'],
+            'axis': {'label': 'Zlep_cand_mass', 'n_or_arr': 70, 'lo': 0, 'hi': 700}
+        },
+        'Zlep_cand_mass_QCD_D': {
+            'target': 'Zlep_cand_mass',
+            'name'  : 'Zlep_cand_mass_QCD_D',  # name to write to histogram
+            'region': ['QCD_D'],
+            'axis': {'label': 'Zlep_cand_mass', 'n_or_arr': 70, 'lo': 0, 'hi': 700}
+        },
         'Zlep_cand_mass_DYcontrol': {
             'target': 'Zlep_cand_mass',
             'name'  : 'Zlep_cand_mass_DYcontrol',  # name to write to histogram
@@ -176,7 +194,44 @@ class SUEP_NTuple(WSProducer):
     selection = {
             "signal" : [
                 "event.ngood_bjets     >  0",
-                "event.lep_category    == 2",
+                "event.lep_category    == 1",
+                "event.event_category    == 1",
+                "event.leading_lep_pt  > 20",
+                "event.trailing_lep_pt > 10",
+                "event.Zlep_cand_mass > 15",
+                "event.leading_Hbb_pt > 20",
+                "event.trailing_Hbb_pt > 20",
+                "event.leading_jet_pt > 20",
+                "event.trailing_jet_pt > 20"
+            ],
+            "QCD_B" : [
+                "event.ngood_bjets     >  0",
+                "event.lep_category    == 1",
+                "event.event_category    == 2",
+                "event.leading_lep_pt  > 20",
+                "event.trailing_lep_pt > 10",
+                "event.Zlep_cand_mass > 15",
+                "event.leading_Hbb_pt > 20",
+                "event.trailing_Hbb_pt > 20",
+                "event.leading_jet_pt > 20",
+                "event.trailing_jet_pt > 20"
+            ],
+            "QCD_C" : [
+                "event.ngood_bjets     >  0",
+                "event.lep_category    == 1",
+                "event.event_category    == 3",
+                "event.leading_lep_pt  > 20",
+                "event.trailing_lep_pt > 10",
+                "event.Zlep_cand_mass > 15",
+                "event.leading_Hbb_pt > 20",
+                "event.trailing_Hbb_pt > 20",
+                "event.leading_jet_pt > 20",
+                "event.trailing_jet_pt > 20"
+            ],
+            "QCD_D" : [
+                "event.ngood_bjets     >  0",
+                "event.lep_category    == 1",
+                "event.event_category    == 4",
                 "event.leading_lep_pt  > 20",
                 "event.trailing_lep_pt > 10",
                 "event.Zlep_cand_mass > 15",
@@ -187,7 +242,8 @@ class SUEP_NTuple(WSProducer):
             ],
             "DYcontrol" : [
                 "event.ngood_bjets     >  0",
-                "event.lep_category    == 2",
+                "event.lep_category    == 1",
+                "event.event_category    == 1",
                 "event.leading_lep_pt  > 20",
                 "event.trailing_lep_pt > 10",
                 "event.leading_Hbb_pt > 20",
@@ -199,7 +255,8 @@ class SUEP_NTuple(WSProducer):
             ],
             "TTcontrol" : [
                 "event.ngood_bjets     >  0",
-                "event.lep_category    == 2",
+                "event.lep_category    == 1",
+                "event.event_category    == 1",
                 "event.leading_lep_pt  > 20",
                 "event.trailing_lep_pt > 10",
                 "event.leading_Hbb_pt > 20",

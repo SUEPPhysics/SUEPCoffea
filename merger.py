@@ -5,8 +5,9 @@ from termcolor import colored
 
 
 
-indir = "/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/data/"
-outdir = "/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/neverhaveiever/merged"
+
+indir = "/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/qcdtest/data/"
+outdir = "/eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/test/qcdtest/data/merged"
 
 def main():
     pattern = "WZ"
