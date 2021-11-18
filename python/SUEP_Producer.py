@@ -64,24 +64,6 @@ class WSProducer(ProcessorABC):
 
 class SUEP_NTuple(WSProducer):
     histograms = {
-        'Zlep_cand_mass_QCD_B': {
-            'target': 'Zlep_cand_mass',
-            'name'  : 'Zlep_cand_mass_QCD_B',  # name to write to histogram
-            'region': ['QCD_B'],
-            'axis': {'label': 'Zlep_cand_mass', 'n_or_arr': 70, 'lo': 0, 'hi': 700}
-        },
-        'Zlep_cand_mass_QCD_C': {
-            'target': 'Zlep_cand_mass',
-            'name'  : 'Zlep_cand_mass_QCD_C',  # name to write to histogram
-            'region': ['QCD_C'],
-            'axis': {'label': 'Zlep_cand_mass', 'n_or_arr': 70, 'lo': 0, 'hi': 700}
-        },
-        'Zlep_cand_mass_QCD_D': {
-            'target': 'Zlep_cand_mass',
-            'name'  : 'Zlep_cand_mass_QCD_D',  # name to write to histogram
-            'region': ['QCD_D'],
-            'axis': {'label': 'Zlep_cand_mass', 'n_or_arr': 70, 'lo': 0, 'hi': 700}
-        },
         'Zlep_cand_mass_DYcontrol': {
             'target': 'Zlep_cand_mass',
             'name'  : 'Zlep_cand_mass_DYcontrol',  # name to write to histogram
@@ -272,9 +254,65 @@ class SUEP_NTuple(WSProducer):
     def weighting(self, event: LazyDataFrame):
         weight = 1.0
         try:
+            print('asdf', event.xsecscale)
             weight = event.xsecscale
+            print('weight ', weight)
         except:
             return "ERROR: weight branch doesn't exist"
+
+        if self.isMC:
+            try:
+                print("qwer", event.genWeight)
+                weight *= event.genWeight
+            except:
+                return "ERROR: genWeight doesn't exist"
+
+#        if "puWeight" in self.syst_suffix:
+#            if "Up" in self.syst_suffix:
+#                weight *= event.puWeightUp
+#            else:
+#                weight *= event.puWeightDown
+#        else:
+#            weight *= event.puWeight
+#            # PDF uncertainty
+#        if self.isMC:
+#            if "PDF" in self.syst_suffix:
+#                try:
+#                    if "Up" in self.syst_suffix:
+#                        weight *= event.pdfw_Up
+#                    else:
+#                        weight *= event.pdfw_Down
+#                except:
+#                    pass
+            #Muon SF    
+#            if "MuonSF" in self.syst_suffix:
+#                if "Up" in self.syst_suffix:
+#                    weight *= event.w_muon_SFUp
+#                else:
+#                    weight *= event.w_muon_SFDown
+#            else:
+#                weight *= event.w_muon_SF
+            # Electron SF
+#            if "ElecronSF" in self.syst_suffix:
+#                if "Up" in self.syst_suffix:
+#                    weight *= event.w_electron_SFUp
+#                else:
+#                    weight *= event.w_electron_SFDown
+#            else:
+#                weight *= event.w_electron_SF
+	    #Prefire Weight#            try:
+#            try:
+#                if "PrefireWeight" in self.syst_suffix:
+#                    if "Up" in self.syst_suffix:
+#                        weight *= event.PrefireWeight_Up
+#                    else:
+#                        weight *= event.PrefireWeight_Down
+#                else:
+#                    weight *= event.PrefireWeight
+#            except:
+#                print("no prefire weight")
+#                pass
+
         return weight
 
     def naming_schema(self, name, region):
