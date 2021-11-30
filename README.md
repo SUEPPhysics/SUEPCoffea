@@ -1,5 +1,5 @@
-# HH Coffea adapted from SUEP Coffea
-HH analysis using [Coffea](https://coffeateam.github.io/coffea/)
+# HH Coffea 
+adapted from SUEP Coffea. HH analysis using [Coffea](https://coffeateam.github.io/coffea/)
 
 ## Quick start
 ```bash
@@ -37,9 +37,7 @@ Inside the singularity shell, can run a shell script over all files (TODO update
 ```
 
 ## Plotter
-To plot run HHplotter.py
-Options for input histogram directory from coffea, input samples directory, xsection yaml, and option to parallelize
-Example command:
+To plot run HHplotter.py. Options for input are histogram directory from coffea, input samples directory, xsection yaml, and option to parallelize. Example command:
 ```bash
 python HHplotter.py --parallel --hist_dir=qcdtestv2_coffea --sample_dir=/eos/user/v/vinguyen/qcdtestv2/merged/
 ```
