@@ -116,7 +116,7 @@ if options.isMC:
             processor_instance=instance,
             executor=futures_executor,
             executor_args={'workers': 10},
-            chunksize=500000
+            chunksize=500000000
         )
         for h, hist in output.items():
             f[h] = export1d(hist)
