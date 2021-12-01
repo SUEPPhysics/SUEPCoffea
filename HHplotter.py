@@ -103,15 +103,16 @@ def rebin_factor( a, newshape ):
 
 def normalize_event_yields(event_yields, normalizations):
 # Apply genweight/lumi
-    Data =  ( event_yields['DoubleMuon_Run2016B']
-        +event_yields['DoubleMuon_Run2016C']
-        +event_yields['DoubleMuon_Run2016D']
-        +event_yields['DoubleMuon_Run2016E']
-        +event_yields['DoubleMuon_Run2016F']
-        +event_yields['DoubleMuon_Run2016G']
-        +event_yields['DoubleMuon_Run2016H']
+    Data =  ( event_yields['DoubleEG_Run2016B']
+        +event_yields['DoubleEG_Run2016C']
+        +event_yields['DoubleEG_Run2016D']
+        +event_yields['DoubleEG_Run2016E']
+        +event_yields['DoubleEG_Run2016F']
+        +event_yields['DoubleEG_Run2016G']
+        +event_yields['DoubleEG_Run2016H']
         )
 
+# TODO search substring in dictionary for different backgrounds
 #    DY = 0
 #    TT = 0
 #    SMHiggs = 0
@@ -122,69 +123,70 @@ def normalize_event_yields(event_yields, normalizations):
 #		    Wjets += normalizations[sample] * event_yields[sample]
 #	    else:
 #		    SMHiggs += ...
+
     DY =   ( normalizations['DYJetsToLL_M-10to50']*event_yields['DYJetsToLL_M-10to50']
-            +1.26826142e-07*event_yields['DYToLL_0J']
-            +1.60262147e-07*event_yields['DYToLL_1J']
-            +3.6089398e-07*event_yields['DYToLL_2J']
+            +normalizations['DYToLL_0J']*event_yields['DYToLL_0J']
+            +normalizations['DYToLL_1J']*event_yields['DYToLL_1J']
+            +normalizations['DYToLL_2J']*event_yields['DYToLL_2J']
             )
 
-    TT = 0.0004714*event_yields['TT']
+    TT = normalizations['TT']*event_yields['TT']
 
-#    SMHiggs = ( 1.001376*event_yields['histogram_ggZH_HToBB_ZToLL']
-#            +8.526278706823073*event_yields['histogram_GluGluHToBB']
-#            #+3165.5765176496025*event_yields['histogram_GluGluHToWWTo2L2Nu']
-#            +0.4364072814562913*event_yields['histogram_GluGluHToZZTo4L']
-#            #+210.7766369298098*event_yields['histogram_GluGluZH_HToWW']
-#            +20.879793367043888*event_yields['histogram_VBFHToBB']
-#            +74.1920460729453*event_yields['histogram_VBFHToWWTo2L2Nu']
-#            +0.01975231809072535*event_yields['histogram_VBF_HToZZTo4L']
-#            +0.03149248440712202*event_yields['histogram_WminusH_HToZZTo4L']
-#            +0.03329174080543033*event_yields['histogram_WplusH_HToZZTo4L']
-#            +41.765804251004504*event_yields['histogram_ZH_HToBB_ZToLL']
-#            +1.9776479867231058*event_yields['histogram_WH_HToBB_WToLNu']
-#            )
-#
-#    SingleTop = ( 12.567585731103017*event_yields['histogram_ST_s-channel_4f']
-#            +163.98185299274917*event_yields['histogram_ST_t-channel_antitop_4f']
-#            +153.81183643335171*event_yields['histogram_ST_t-channel_top_4f']
-#            +186.15065654670195*event_yields['histogram_ST_tW_antitop_5f']
-#            +185.62225741173017*event_yields['histogram_ST_tW_top_5f']
-#            )
+    SMHiggs = ( normalizations['ggZH_HToBB_ZToLL']*event_yields['ggZH_HToBB_ZToLL']
+            +normalizations['ggZH_HToBB_ZToLL']*event_yields['GluGluHToBB']
+            +normalizations['GluGluHToWWTo2L2Nu']*event_yields['GluGluHToWWTo2L2Nu']
+            +normalizations['GluGluHToZZTo4L']*event_yields['GluGluHToZZTo4L']
+            +normalizations['GluGluZH_HToWW']*event_yields['GluGluZH_HToWW']
+            +normalizations['VBFHToBB']*event_yields['VBFHToBB']
+            +normalizations['VBFHToWWTo2L2Nu']*event_yields['VBFHToWWTo2L2Nu']
+            +normalizations['VBF_HToZZTo4L']*event_yields['VBF_HToZZTo4L']
+            +normalizations['WminusH_HToZZTo4L']*event_yields['WminusH_HToZZTo4L']
+            +normalizations['WplusH_HToZZTo4L']*event_yields['WplusH_HToZZTo4L']
+            +normalizations['ZH_HToBB_ZToLL']*event_yields['ZH_HToBB_ZToLL']
+            +normalizations['WH_HToBB_WToLNu']*event_yields['WH_HToBB_WToLNu']
+            )
 
-#    VV = ( 4.079802092006373*event_yields['histogram_WWTo1L1Nu2Q']
-#            +0.832523649032172*event_yields['histogram_WWTo4Q_4f']
-#            +0.9135511958978306*event_yields['histogram_WZTo1L1Nu2Q']
-#            +11.668208997480251*event_yields['histogram_WZTo1L3Nu']
-#            +0.8630237624695615*event_yields['histogram_WZTo2L2Q']
-#            +1.2560781747809395*event_yields['histogram_WZTo2Q2Nu']
-#            +1.6364191282153688*event_yields['histogram_WZTo3LNu']
-#            +1.4776727876795839*event_yields['histogram_ZZTo2L2Q']
-#            +0.7307601577135954*event_yields['histogram_ZZTo2Q2Nu']
-#            +2.130537286919005*event_yields['histogram_ZZTo4L']
-#            +0.729250548985396*event_yields['histogram_ZZTo4Q']
-#            +6.815110101472653*event_yields['histogram_VVTo2L2Nu']
-#            )
+    SingleTop = ( normalizations['ST_s-channel_4f_InclusiveDecays']*event_yields['ST_s-channel_4f_InclusiveDecays']
+            +normalizations['ST_t-channel_antitop_4f']*event_yields['ST_t-channel_antitop_4f']
+            +normalizations['ST_t-channel_top_4f']*event_yields['ST_t-channel_top_4f']
+            +normalizations['ST_tW_antitop_5f']*event_yields['ST_tW_antitop_5f']
+            +normalizations['ST_tW_top_5f']*event_yields['ST_tW_top_5f']
+            )
 
-#    ttV = ( 0.7634861609544465*event_yields['histogram_ttHJetToNonbb']
-#            +1.090205294107825*event_yields['histogram_ttHJetTobb']
-#            +1.4608520317358018*event_yields['histogram_ttHToNonbb']
-#            +2.019714054725842*event_yields['histogram_ttHTobb']
-#            +6.1098061413845555*event_yields['histogram_TTWJetsToLNu']
-#            +23.455275139374876*event_yields['histogram_TTWJetsToQQ']
-#            +17.438734129906862*event_yields['histogram_TTZToLLNuNu_M-10']
-#            +54.49853453413941*event_yields['histogram_TTZToQQ']
-#          )
+    VV = ( normalizations['WWTo1L1Nu2Q']*event_yields['WWTo1L1Nu2Q']
+            +normalizations['WWTo4Q_4f']*event_yields['WWTo4Q_4f']
+            +normalizations['WZTo1L1Nu2Q']*event_yields['WZTo1L1Nu2Q']
+            +normalizations['WZTo1L3Nu']*event_yields['WZTo1L3Nu']
+            +normalizations['WZTo2L2Q']*event_yields['WZTo2L2Q']
+            +normalizations['WZTo2Q2Nu']*event_yields['WZTo2Q2Nu']
+            +normalizations['WZTo3LNu']*event_yields['WZTo3LNu']
+            +normalizations['ZZTo2L2Q_13TeV']*event_yields['ZZTo2L2Q_13TeV']
+            +normalizations['ZZTo2Q2Nu']*event_yields['ZZTo2Q2Nu']
+            +normalizations['ZZTo4L']*event_yields['ZZTo4L']
+            +normalizations['ZZTo4Q']*event_yields['ZZTo4Q']
+            +normalizations['VVTo2L2Nu']*event_yields['VVTo2L2Nu']
+            )
 
-#    Wjets = ( 0.6301590987380689*event_yields['histogram_WToLNu_0J']
-#            +0.16810126746176954*event_yields['histogram_WToLNu_1J']
-#            +0.09175339649542336*event_yields['histogram_WToLNu_2J']
-#            )
+    ttV = ( normalizations['ttHJetToNonbb']*event_yields['ttHJetToNonbb']
+            +normalizations['ttHJetTobb']*event_yields['ttHJetTobb']
+            +normalizations['ttHToNonbb']*event_yields['ttHToNonbb']
+            +normalizations['ttHTobb']*event_yields['ttHTobb']
+            +normalizations['TTWJetsToLNu']*event_yields['TTWJetsToLNu']
+            +normalizations['TTWJetsToQQ']*event_yields['TTWJetsToQQ']
+            #+normalizations['TTZToLLNuNu']*event_yields['TTZToLLNuNu']
+            +normalizations['TTZToQQ']*event_yields['TTZToQQ']
+          )
 
-    return Data, DY, TT
+    Wjets = ( normalizations['WToLNu_0J']*event_yields['WToLNu_0J']
+            +normalizations['WToLNu_1J']*event_yields['WToLNu_1J']
+            +normalizations['WToLNu_2J']*event_yields['WToLNu_2J']
+            )
+
+    return Data, DY, TT, SMHiggs, SingleTop, VV, ttV, Wjets
 
 def get_bins_and_event_yields(histograms, normalizations):
     all_bins = []
-    things_to_plot = {'DY': [], 'Data':[], 'TT': []}
+    things_to_plot = {'DY': [], 'Data':[], 'TT': [], 'SMHiggs': [], 'SingleTop': [], 'VV': [], 'ttV': [], 'Wjets': []}
     names = []
     for idx, (name, roothist) in enumerate(histograms['DoubleMuon_Run2016B']):
         if "genEventSumw" == name:
@@ -194,16 +196,21 @@ def get_bins_and_event_yields(histograms, normalizations):
         event_yields = {}
         for key, value in histograms.items():
             event_yields[key] = np.abs(value[idx][1].numpy())[0]# * normalizations[key]
-        Data, DY, TT = normalize_event_yields(event_yields, normalizations)
+        Data, DY, TT, SMHiggs, SingleTop, VV, ttV, Wjets = normalize_event_yields(event_yields, normalizations)
         things_to_plot['DY'].append(DY)
         things_to_plot['Data'].append(Data)
         things_to_plot['TT'].append(TT)
+        things_to_plot['SMHiggs'].append(SMHiggs)
+        things_to_plot['SingleTop'].append(SingleTop)
+        things_to_plot['VV'].append(VV)
+        things_to_plot['ttV'].append(ttV)
+        things_to_plot['Wjets'].append(Wjets)
         bins = roothist.numpy()[1]
         all_bins.append(roothist.numpy()[1])
         names.append(name)
     return names, all_bins, things_to_plot
 
-def new_plotting(idx, name, bins, Data=None, DY=None, TT=None):
+def new_plotting(idx, name, bins, Data=None, DY=None, TT=None, SMHiggs=None, SingleTop=None, VV=None, ttV=None, Wjets=None):
     fig, axarr = plt.subplots(2, dpi=150, figsize=(6, 5), sharex=True,
                               gridspec_kw={'hspace': 0.05, 'height_ratios': (0.8,0.2)},
                               constrained_layout=False)
@@ -212,8 +219,8 @@ def new_plotting(idx, name, bins, Data=None, DY=None, TT=None):
     name = name.decode("utf-8")
     name = name.replace(";1", "")
 
-
-    MC = DY+TT
+    Other = VV + SingleTop + Wjets + ttV
+    MC = DY+TT+SMHiggs+Other
     Data = Data
     ratio = Data/MC
     binc = np.array([ 0.5*(bins[j]+bins[j+1])for j in range(bins.shape[0]-1)])
@@ -223,9 +230,9 @@ def new_plotting(idx, name, bins, Data=None, DY=None, TT=None):
     upper.errorbar(binc, Data, xerr = None, yerr = np.sqrt(Data), fmt = 'o',
                    zorder=10, color='black', label='Data', markersize=3)
 
-    all_weights = np.vstack([DY, TT]).transpose()
+    all_weights = np.vstack([SMHiggs, Other, DY, TT]).transpose()
     all_x = np.vstack([binc] * all_weights.shape[1]).transpose()
-    labels = ['TT', 'DY'][::-1]
+    labels = ['TT', 'DY', 'Other', 'SMHiggs'][::-1]
 
     upper.hist(x=all_x, bins=bins, weights=all_weights,
                histtype='stepfilled', edgecolor='black', zorder=1,
@@ -402,7 +409,7 @@ def main():
         num_cpus = os.cpu_count()
         batch_size = len(all_bins) // num_cpus + 1
         (Parallel(n_jobs=num_cpus, batch_size=batch_size)
-         (delayed(new_plotting)(idx, name, bins, Data=things_to_plot['Data'][idx], DY=things_to_plot['DY'][idx], TT=things_to_plot['TT'][idx])
+         (delayed(new_plotting)(idx, name, bins, Data=things_to_plot['Data'][idx], DY=things_to_plot['DY'][idx], TT=things_to_plot['TT'][idx], SMHiggs=things_to_plot['SMHiggs'][idx], SingleTop=things_to_plot['SingleTop'][idx], VV=things_to_plot['VV'][idx], ttV=things_to_plot['ttV'][idx], Wjets=things_to_plot['Wjets'][idx])
          for idx, (name, bins) in enumerate(zip(names, all_bins))))
         #Parallel(n_jobs=num_cpus, backend='multiprocessing', batch_size=batch_size)(delayed(plotting_func)(idx, name, roothist, histograms, normalizations)
         #         for idx, (name, roothist) in enumerate(histograms['DoubleMuon_Run2016B']))
