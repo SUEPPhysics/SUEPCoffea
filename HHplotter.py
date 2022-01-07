@@ -137,12 +137,17 @@ def normalize_event_yields(event_yields, normalizations, file_to_category):
     return categorized_yields
 
 def get_bins_and_event_yields(histograms, normalizations):
-    all_bins = []
-    all_event_yields = []
-    names = []
-
     with open('2016_sample_reference.json', 'r') as infile:
         file_to_category = json.load(infile)
+
+    categories = set(file_to_category.values())
+
+    df_dict = {}
+    df_dict['sample_name'] = []
+    df_dict['bins'] = []
+    for category in categories:
+        df_dict[category] = []
+    df_dict['Other'] = []
 
     logging.info('Getting bins and event yields.')
 
@@ -158,86 +163,104 @@ def get_bins_and_event_yields(histograms, normalizations):
             event_yields[key] = np.abs(value[idx][1].numpy())[0]
         output = normalize_event_yields(event_yields, normalizations, file_to_category)
         output['Other'] = output['VV']  + output['SingleTop'] + output['Wjets'] + output['ttV']
-        all_event_yields.append(output)
 
-        bins = roothist.numpy()[1]
-        all_bins.append(roothist.numpy()[1])
-        names.append(name)
+        for category in output:
+            df_dict[category].append(output[category])
+
+        df_dict['bins'].append(roothist.numpy()[1])
+        df_dict['sample_name'].append(name)
 
     logging.info('Finished getting bins and event yields.')
 
-    return names, all_bins, all_event_yields
+    return pd.DataFrame(df_dict)
 
-def estimate_background(names, all_event_yields, tol=1e-16, maxiter=50, disp=False):
-    names_for_bkgd_est = ['Zlep_cand_mass_DYcontrol_QCD_C', 'Zlep_cand_mass_TTcontrol_QCD_C',
+def estimate_background(all_event_yields, tol=1e-16, maxiter=50, disp=False, sigma=1):
+    names_for_bkgd_est = np.array(['Zlep_cand_mass_DYcontrol_QCD_C', 'Zlep_cand_mass_TTcontrol_QCD_C',
                           'Zlep_cand_mass_DYcontrol', 'Zlep_cand_mass_TTcontrol',
-                          'Zlep_cand_mass_QCD_B','Zlep_cand_mass_QCD_D']
-    idxs_for_bkgd_est = []
-    for bkgd_name in names_for_bkgd_est:
-        for idx, name in enumerate(names):
-            if name == bkgd_name:
-                idxs_for_bkgd_est.append(idx)
-                break
+                          'Zlep_cand_mass_QCD_B','Zlep_cand_mass_QCD_D'])
+    df = all_event_yields.set_index('sample_name')
+    df_subset = df.loc[names_for_bkgd_est]
+    df_subset = df_subset.reset_index()
 
-    dy_c, tt_c, dy, tt, qcd_b, qcd_d = *[all_event_yields[idx] for idx in idxs_for_bkgd_est],
+    dy_c, tt_c, dy, tt, qcd_b, qcd_d = *[df_subset.iloc[idx] for idx in range(df_subset.shape[0])],
 
-    qcd_norm = 100
-    dy_norm = 100
-    tt_norm = 100
-    error = 100
 
-    residual_func = lambda x, y, z: x['Data'] - (x['DY']*y + x['TT']*z + x['SMHiggs'] + x['Other'])
 
-    counter = 0
+    residual_func = lambda x, y, z, s: (x['Data'] + s * np.sqrt(x['Data'])
+                                        - (x['DY'] * y + x['TT'] * z + x['SMHiggs'] + x['Other']))
 
-    while (error > tol) and (counter < maxiter):
-        dy_c_shape = residual_func(dy_c, 1, 1)
-        tt_c_shape = residual_func(tt_c, 1, 1)
+    def optimizer(sigma):
+        counter = 0
+        qcd_norm = 100
+        dy_norm = 100
+        tt_norm = 100
+        error = 100
 
-        updated_dy_norm = np.sum((dy['Data'] - (qcd_norm * dy_c_shape + dy['TT'] + dy['SMHiggs'] + dy['Other'])) / np.sum(dy['DY']))
-        updated_tt_norm = np.sum((tt['Data'] - (qcd_norm * tt_c_shape + tt['DY'] + tt['SMHiggs'] + tt['Other'])) / np.sum(tt['TT']))
+        dy_data = dy['Data'] + sigma * np.sqrt(dy['Data'])
+        tt_data = tt['Data'] + sigma * np.sqrt(tt['Data'])
 
-        qcd_b_val = np.sum(residual_func(qcd_b, dy_norm, tt_norm))
-        qcd_d_val = np.sum(residual_func(qcd_d, dy_norm, tt_norm))
+        while (error > tol) and (counter < maxiter):
+            dy_c_shape = residual_func(dy_c, 1, 1, sigma)
+            tt_c_shape = residual_func(tt_c, 1, 1, sigma)
 
-        updated_qcd_norm = qcd_b_val / qcd_d_val
-        error = np.sqrt((updated_qcd_norm - qcd_norm)**2 + np.abs(updated_dy_norm - dy_norm)**2 + np.abs(updated_tt_norm - tt_norm)**2)
+            updated_dy_norm = np.sum((dy_data - (qcd_norm * dy_c_shape + dy['TT'] + dy['SMHiggs'] + dy['Other'])) / np.sum(dy['DY']))
+            updated_tt_norm = np.sum((tt_data - (qcd_norm * tt_c_shape + tt['DY'] + tt['SMHiggs'] + tt['Other'])) / np.sum(tt['TT']))
 
-        #print(f'DY norm: {dy_norm}, TT norm: {tt_norm}, fBD: {qcd_norm}, err: {current_err}')
+            qcd_b_val = np.sum(residual_func(qcd_b, dy_norm, tt_norm, sigma))
+            qcd_d_val = np.sum(residual_func(qcd_d, dy_norm, tt_norm, sigma))
 
-        qcd_norm = updated_qcd_norm
-        dy_norm = updated_dy_norm
-        tt_norm = updated_tt_norm
+            updated_qcd_norm = qcd_b_val / qcd_d_val
+            error = np.sqrt((updated_qcd_norm - qcd_norm)**2 + np.abs(updated_dy_norm - dy_norm)**2 + np.abs(updated_tt_norm - tt_norm)**2)
 
-        counter += 1
+            #print(f'DY norm: {dy_norm}, TT norm: {tt_norm}, fBD: {qcd_norm}, err: {current_err}')
 
-    if disp:
-        print(f'qcd_norm: {qcd_norm} \n'
-              f'dy_norm: {dy_norm} \n'
-              f'tt_norm: {tt_norm} \n'
-              f'Error: {error} \n'
-              f'Converged: {error <= tol} \n'
-              f'Iterations: {counter}')
+            qcd_norm = updated_qcd_norm
+            dy_norm = updated_dy_norm
+            tt_norm = updated_tt_norm
 
-    return dy_norm, tt_norm, qcd_norm
+            counter += 1
 
-def new_plotting(idx, name, bins, all_event_yields, outdir=''):
+        if disp and sigma == 0:
+            print(f'qcd_norm: {qcd_norm} \n'
+                  f'dy_norm: {dy_norm} \n'
+                  f'tt_norm: {tt_norm} \n'
+                  f'Error: {error} \n'
+                  f'Converged: {error <= tol} \n'
+                  f'Iterations: {counter}')
+
+        return qcd_norm, dy_norm, tt_norm
+
+    norms = optimizer(0)
+    norms_upper = optimizer(sigma)
+    norms_lower = optimizer(-sigma)
+    return norms, norms_upper, norms_lower
+
+def data_mc_residual(x, norm1=1, norm2=1):
+    return (x['Data'] - (x['DY']  * norm1 + x['TT'] * norm2 + x['SMHiggs'] + x['Other']))
+
+def scale_cregions (df, qcd_norm, dy_norm, tt_norm):
+    df = df.copy()
+    df_subset = df[df['sample_name'].str.contains('QCD_C')].set_index('sample_name')
+    residuals = (data_mc_residual(df_subset, dy_norm, tt_norm)) * qcd_norm
+    df['QCD_estimate'] = 0
+    df = df.set_index('sample_name')
+    df.loc[residuals.index.str.replace('_QCD_C', ''), 'QCD_estimate'] = residuals.values
+    return df
+
+
+def new_plotting(event_yields, outdir=''):
     fig, axarr = plt.subplots(2, dpi=150, figsize=(6, 5), sharex=True,
                               gridspec_kw={'hspace': 0.05, 'height_ratios': (0.8,0.2)},
                               constrained_layout=False)
     upper = axarr[0]
     lower = axarr[1]
-    Other = 0
-    MC = 0
-    Data = 0
 
-    for key in all_event_yields:
-        if key == 'VV' or key == 'SingleTop' or key == 'Wjets' or key == 'ttV':
-            Other += all_event_yields[key]
-        elif key == 'DY' or key == 'TT' or key == 'SMHiggs':
-            MC += all_event_yields[key]
-        elif key == 'Data':
-            Data += all_event_yields['Data']
+    mc_categories = ['DY', 'TT', 'SMHiggs']
+    MC = event_yields[mc_categories].sum()
+    Data = event_yields['Data']
+    Other = event_yields['Other']
+    name = event_yields['sample_name']
+    bins = event_yields['bins']
 
     MC += Other
 
@@ -250,7 +273,8 @@ def new_plotting(idx, name, bins, all_event_yields, outdir=''):
                    zorder=10, color='black', label='Data', markersize=3)
 
 
-    all_weights = np.vstack([all_event_yields['SMHiggs'], Other, all_event_yields['DY'], all_event_yields['TT']]).transpose()
+    all_weights = np.vstack([event_yields['SMHiggs'], event_yields['Other'],
+                             event_yields['DY'], event_yields['TT']]).transpose()
     all_x = np.vstack([binc] * all_weights.shape[1]).transpose()
     labels = ['TT', 'DY', 'Other', 'SMHiggs'][::-1]
 
@@ -359,9 +383,8 @@ def main():
     xsections = get_xsections(xfile)
     normalizations = get_normalizations(samples_directory, xsections, list(histograms.keys()))
 
-    names, all_bins, all_event_yields = get_bins_and_event_yields(histograms, normalizations)
-
-    background_estimates = estimate_background(names, all_event_yields, disp=True)
+    df = get_bins_and_event_yields(histograms, normalizations)
+    #background_estimates = estimate_background(names, all_event_yields, disp=True)
 
     logging.info('Making plots.')
 
@@ -369,11 +392,11 @@ def main():
         num_cpus = os.cpu_count()
         batch_size = 1 #len(all_bins) // num_cpus + 1
         (Parallel(n_jobs=num_cpus, batch_size=batch_size)
-         (delayed(new_plotting)(idx, name, bins, all_event_yields[idx], outdir=outdir)
-         for idx, (name, bins) in enumerate(zip(names, all_bins))))
+         (delayed(new_plotting)(df.iloc[rowidx], outdir=outdir)
+         for rowidx in range(df.shape[0])))
     else:
-        for idx, (name, bins) in enumerate(zip(names, all_bins)):
-            new_plotting(idx, name, bins, all_event_yields[idx], outdir=outdir)
+        for rowidx in range(df.shape[0]):
+            new_plotting(df.iloc[rowidx], outdir=outdir)
 
     logging.info(f'Finished making plots and saved to {outdir}.')
 
