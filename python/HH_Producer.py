@@ -565,7 +565,7 @@ class HH_NTuple(WSProducer):
             else:
                 weight = weight * event.w_electron_SF
 
-        #Prefire Weight
+            #Prefire Weight
             try:
                 if "PrefireWeight" in self.syst_suffix:
                     if "Up" in self.syst_suffix:
@@ -576,6 +576,15 @@ class HH_NTuple(WSProducer):
                     weight = weight * event.PrefireWeight
             except:
                 pass
+
+            #TriggerSFWeight
+            if "TriggerSFWeight" in self.syst_suffix:
+                if "Up" in self.syst_suffix:
+                    weight = weight * event.TriggerSFWeightUp
+                else:
+                    weight = weight * event.TriggerSFWeightDown
+            else:
+                weight = weight * event.TriggerSFWeight
 
         return weight
 

@@ -43,9 +43,28 @@ def get_histograms(hist_dir, year):
         if year == '2016':
             if 'QCD_Pt-15to20_MuEnriched' in filename: continue
             if 'QCD_Pt-20to30_EMEnriched' in filename: continue
+            if 'QCD_Pt-20to30_MuEnriched' in filename: continue
             if 'QCD_Pt-30to50_EMEnriched' in filename: continue
             if 'SingleElectron' in filename: continue
             if 'DoubleEG' in filename: continue
+
+        if year == '2017':
+            if 'QCD_Pt-15to20_EMEnriched' in filename: continue
+            if 'QCD_Pt-15to20_MuEnriched' in filename: continue
+            if 'QCD_Pt-20to30_EMEnriched' in filename: continue
+            if 'QCD_Pt-30to50_EMEnriched' in filename: continue
+            if 'TTTo' in filename: continue
+            if 'SingleElectron' in filename: continue
+            if 'DoubleEG' in filename: continue
+
+        if year == '2018':
+            if 'QCD_Pt-15to20_EMEnriched' in filename: continue
+            if 'QCD_Pt-15to20_MuEnriched' in filename: continue
+            if 'QCD_Pt-20to30_EMEnriched' in filename: continue
+            if 'QCD_Pt-30to50_EMEnriched' in filename: continue
+            if 'ST_s-channel_4f_leptonDecays_TuneCP5_13TeV-madgraph-pythia8' in filename: continue
+            if 'TTTo' in filename: continue
+            if 'EGamma' in filename: continue
 
         samplename = filename.split('_WS')[0]
 
@@ -83,6 +102,8 @@ def get_normalizations(samples_directory, xsections, histogram_names, year):
 
     for fn in tqdm(os.listdir(samples_directory)):
         fn_sample = os.path.join(samples_directory, fn)
+        if 'TTTo' in fn_sample : continue
+        if 'ST_s-channel_4f_leptonDecays_TuneCP5_13TeV-madgraph-pythia8' in fn_sample : continue
         if os.path.isfile(fn_sample):
             _proc = os.path.basename(fn).replace(".root","")
             _file = uproot.open(fn_sample)
@@ -94,6 +115,8 @@ def get_normalizations(samples_directory, xsections, histogram_names, year):
                 _scale = 1
             elif ("SingleMuon") in fn:
                 _scale = 1
+            elif ("EGamma") in fn:
+                _scale = 1
             else:
                 _scale  = xs_scale(xsections, year, ufile=_file, proc=_proc)
             for idx, name in enumerate(histogram_names):
@@ -102,10 +125,8 @@ def get_normalizations(samples_directory, xsections, histogram_names, year):
                     del histogram_names[idx]
                     break
     logging.info('Finished obtaining normalizations.')
-
+# These normalizations scale by lumi/genweight. The xsec is already applied in the plots from coffea
     return(norm_dict)
-
-############### THESE NUMBERS SCALE BY LUMI/GENSUMWEIGHT. THE XSEC IS ALREADY SCALED IN THE PLOT.................. FROM COFFEA OKAY
 
 def rebin( a, newshape ):
         '''Rebin an array to a new shape.
@@ -139,8 +160,15 @@ def normalize_event_yields(event_yields, normalizations, file_to_category):
 
     return categorized_yields
 
-def get_bins_and_event_yields(histograms, normalizations):
-    with open('2016_sample_reference.json', 'r') as infile:
+def get_bins_and_event_yields(histograms, normalizations, year):
+    if year == '2016':
+        choose_hist = 'DoubleMuon_Run2016B-02Apr2020_ver2-v1'
+    elif year == '2017':
+        choose_hist = 'DoubleMuon_Run2017B-02Apr2020-v1'
+    elif year == '2018':
+        choose_hist = 'DoubleMuon_Run2018B-02Apr2020-v1'
+
+    with open(f'{year}_sample_reference.json', 'r') as infile:
         file_to_category = json.load(infile)
 
     categories = set(file_to_category.values())
@@ -154,7 +182,7 @@ def get_bins_and_event_yields(histograms, normalizations):
 
     logging.info('Getting bins and event yields.')
 
-    for idx, (name, roothist) in enumerate(tqdm(histograms['DoubleMuon_Run2016B-02Apr2020_ver2-v1'])):
+    for idx, (name, roothist) in enumerate(tqdm(histograms[choose_hist])):
         name = name.decode("utf-8")
         name = name.replace(";1", "")
 
@@ -187,7 +215,6 @@ def estimate_background(all_event_yields, tol=1e-16, maxiter=50, disp=False, sig
     df_subset = df_subset.reset_index()
 
     dy_c, tt_c, dy, tt, qcd_b, qcd_d = *[df_subset.iloc[idx] for idx in range(df_subset.shape[0])],
-
 
 
     residual_func = lambda x, y, z, s: (x['Data'] + s * np.sqrt(x['Data'])
@@ -403,11 +430,16 @@ def main():
     else:
         outdir = args.outdir
 
+    logging.info(f'Histogram directory: {directory}')
+    logging.info(f'Sample directory: {samples_directory}')
+    logging.info(f'Cross-section file: {xfile}')
+    logging.info(f'Year: {year}')
+
     histograms = get_histograms(directory, year)
     xsections = get_xsections(xfile)
     normalizations = get_normalizations(samples_directory, xsections, list(histograms.keys()), year)
 
-    df = get_bins_and_event_yields(histograms, normalizations)
+    df = get_bins_and_event_yields(histograms, normalizations, year)
 
     if args.nonorm:
         df['QCD_estimate'] = df.apply(lambda x: np.zeros(shape=x['Data'].shape[0]), axis=1)

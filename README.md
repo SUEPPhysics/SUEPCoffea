@@ -30,16 +30,28 @@ If you do not have the requirements set up then you can also run this through th
 singularity shell -B ${PWD} -B /afs -B /eos /cvmfs/unpacked.cern.ch/registry.hub.docker.com/coffeateam/coffea-dask:latest
 ```
 
-Inside the singularity shell, can run a shell script over all files (TODO update this)
+Inside the singularity shell, can run a shell script over all files. This gives output root files from coffea. There is a runner for each year data and MC (TODO update this)
 ```bash
 ./runner_2016mc.sh
 ./runner_2016data.sh
 ```
 
 ## Plotter
-To plot run HHplotter.py. Options for input are histogram directory from coffea, input samples directory, xsection yaml, and option to parallelize. Example command:
+With  Miniconda, use the configuration file to create the virtual environment 'plotting'
 ```bash
-python HHplotter.py --parallel --hist_dir=qcdtestv2_coffea --sample_dir=/eos/user/v/vinguyen/qcdtestv2/merged/
+conda env create -f plotting_env.yml
+```
+
+Activate the environment
+
+```bash
+conda activate plotting
+```
+Alternatively, you can pip install the packages listed inside the yml file.
+
+To plot run HHplotter.py. Options for input are histogram directory of files from coffea made above, input samples directory, input xsection yaml, year, output directory, and option to run without background normalizations ('--nonorm') and option to run in series (default runs in parallel). Example command:
+```bash
+python HHplotter.py --sample_dir /eos/cms/store/group/phys_higgs/HiggsExo/HH_bbZZ_bbllqq/jlidrych/v2/2016/ --hist_dir 2016-v2/ --outdir plots_2016-v2 --year 2016
 ```
 
 ## Requirements
