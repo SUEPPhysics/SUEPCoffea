@@ -32,18 +32,20 @@ logging.getLogger().setLevel(logging.INFO)
 COLORS=list(sns.color_palette('Set2').as_hex())
 #plt.style.use('physics.mplstyle')
 
+LUMI = {'2016':36, '2017':41.5, '2018': 59.8}
 
-def get_histograms(hist_dir):
+def get_histograms(hist_dir, year):
     histograms={}
 
     logging.info('Loading histograms into memory.')
     for filename in tqdm(os.listdir(hist_dir)):
 
-        if 'QCD_Pt-15to20_MuEnrichedPt5' in filename: continue
-        if 'QCD_Pt-20to30_MuEnrichedPt5' in filename: continue
-        if 'EMEnriched' in filename: continue
-        if 'SingleElectron' in filename: continue
-        if 'DoubleEG' in filename: continue
+        if year == '2016':
+            if 'QCD_Pt-15to20_MuEnriched' in filename: continue
+            if 'QCD_Pt-20to30_EMEnriched' in filename: continue
+            if 'QCD_Pt-30to50_EMEnriched' in filename: continue
+            if 'SingleElectron' in filename: continue
+            if 'DoubleEG' in filename: continue
 
         samplename = filename.split('_WS')[0]
 
@@ -56,14 +58,14 @@ def get_histograms(hist_dir):
     logging.info('Finished loading histograms.')
     return histograms
 
-def xs_scale(xsections, ufile, proc):
+def xs_scale(xsections, year, ufile, proc):
     xsec  = xsections[proc]["xsec"]
     xsec *= xsections[proc]["kr"]
     xsec *= xsections[proc]["br"]
     xsec *= 1000.0
     #print (proc, xsec)
     assert xsec > 0, "{} has a null cross section!".format(proc)
-    scale = 36000/ufile["Runs"].array("genEventSumw").sum()
+    scale = LUMI[year]*1000/ufile["Runs"].array("genEventSumw").sum()
     return scale
 
 def get_xsections(infile):
@@ -74,30 +76,31 @@ def get_xsections(infile):
             print(exc)
     return xsections
 
-def get_normalizations(samples_directory, xsections, histogram_names):
+def get_normalizations(samples_directory, xsections, histogram_names, year):
     norm_dict = {}
 
     logging.info('Obtaining normalizations.')
 
     for fn in tqdm(os.listdir(samples_directory)):
         fn_sample = os.path.join(samples_directory, fn)
-        _proc = os.path.basename(fn).replace(".root","")
-        _file = uproot.open(fn_sample)
-        if ("DoubleEG") in fn:
-            _scale = 1
-        elif ("DoubleMuon") in fn:
-            _scale = 1
-        elif ("SingleElectron") in fn:
-            _scale = 1
-        elif ("SingleMuon") in fn:
-            _scale = 1
-        else:
-            _scale  = xs_scale(xsections, ufile=_file, proc=_proc)
-        for idx, name in enumerate(histogram_names):
-            if name in fn:
-                norm_dict[name] = _scale
-                del histogram_names[idx]
-                break
+        if os.path.isfile(fn_sample):
+            _proc = os.path.basename(fn).replace(".root","")
+            _file = uproot.open(fn_sample)
+            if ("DoubleEG") in fn:
+                _scale = 1
+            elif ("DoubleMuon") in fn:
+                _scale = 1
+            elif ("SingleElectron") in fn:
+                _scale = 1
+            elif ("SingleMuon") in fn:
+                _scale = 1
+            else:
+                _scale  = xs_scale(xsections, year, ufile=_file, proc=_proc)
+            for idx, name in enumerate(histogram_names):
+                if name in fn:
+                    norm_dict[name] = _scale
+                    del histogram_names[idx]
+                    break
     logging.info('Finished obtaining normalizations.')
 
     return(norm_dict)
@@ -154,6 +157,7 @@ def get_bins_and_event_yields(histograms, normalizations):
     for idx, (name, roothist) in enumerate(tqdm(histograms['DoubleMuon_Run2016B-02Apr2020_ver2-v1'])):
         name = name.decode("utf-8")
         name = name.replace(";1", "")
+
         if "genEventSumw" == name:
             print("bye")
             continue
@@ -240,22 +244,29 @@ def data_mc_residual(x, norm1=1, norm2=1):
 
 def scale_cregions (df, qcd_norm, dy_norm, tt_norm):
     df = df.copy()
-    df_subset = df[df['sample_name'].str.contains('QCD_C')].set_index('sample_name')
+    c_samples_bool = df['sample_name'].str.contains('QCD_C')
+    c_samples_to_drop = df[c_samples_bool & ~df['sample_name'].str.contains('Zlep_cand_mass_QCD_C')]['sample_name']
+    c_samples = df[c_samples_bool]['sample_name']
+    df_subset = df[c_samples_bool].set_index('sample_name')
     residuals = (data_mc_residual(df_subset, dy_norm, tt_norm)) * qcd_norm
-    df['QCD_estimate'] = 0
+    df['QCD_estimate'] = df.apply(lambda x: np.zeros(shape=x['Data'].shape[0]), axis=1)
     df = df.set_index('sample_name')
     df.loc[residuals.index.str.replace('_QCD_C', ''), 'QCD_estimate'] = residuals.values
+    df = df.drop(c_samples_to_drop).reset_index()
     return df
 
-
-def new_plotting(event_yields, outdir=''):
+def new_plotting(event_yields, bkgd_norm, year, outdir=''):
     fig, axarr = plt.subplots(2, dpi=150, figsize=(6, 5), sharex=True,
                               gridspec_kw={'hspace': 0.05, 'height_ratios': (0.8,0.2)},
                               constrained_layout=False)
     upper = axarr[0]
     lower = axarr[1]
 
-    mc_categories = ['DY', 'TT', 'SMHiggs']
+    # This gives the copy warning.
+    event_yields['DY'] *= bkgd_norm[1]
+    event_yields['TT'] *= bkgd_norm[2]
+
+    mc_categories = ['DY', 'TT', 'SMHiggs', 'QCD_estimate']
     MC = event_yields[mc_categories].sum()
     Data = event_yields['Data']
     Other = event_yields['Other']
@@ -264,6 +275,7 @@ def new_plotting(event_yields, outdir=''):
 
     MC += Other
 
+    # The first bin has a value of 0 and will give a warning.
     ratio = Data/MC
     binc = np.array([ 0.5*(bins[j]+bins[j+1])for j in range(bins.shape[0]-1)])
     binc = bins[:-1] + np.diff(bins) * 0.5
@@ -271,16 +283,26 @@ def new_plotting(event_yields, outdir=''):
 
     upper.errorbar(binc, Data, xerr = None, yerr = np.sqrt(Data), fmt = 'o',
                    zorder=10, color='black', label='Data', markersize=3)
-
-
-    all_weights = np.vstack([event_yields['SMHiggs'], event_yields['Other'],
-                             event_yields['DY'], event_yields['TT']]).transpose()
+    all_weights = np.vstack([event_yields['SMHiggs'],
+                             event_yields['Other'],
+                             event_yields['QCD_estimate'],
+                             event_yields['DY'],
+                             event_yields['TT']]).transpose()
     all_x = np.vstack([binc] * all_weights.shape[1]).transpose()
-    labels = ['TT', 'DY', 'Other', 'SMHiggs'][::-1]
+
+    COLORMAP = {'SMhiggs': COLORS[0],
+                'Other': COLORS[1],
+                'DY': COLORS[2],
+                'TT': COLORS[3],
+                'QCD': COLORS[4],
+                'QCD_estimate':COLORS[5]}
+
+    labels = ['SMhiggs', 'Other', 'QCD', 'DY', 'TT']
+    plotting_colors = [COLORMAP[s] for s in labels]
 
     upper.hist(x=all_x, bins=bins, weights=all_weights,
                histtype='stepfilled', edgecolor='black', zorder=1,
-               stacked=True, color=COLORS[:all_weights.shape[1]], label=labels)
+               stacked=True, color=plotting_colors, label=labels)
 
     upper.set_yscale("log")
     upper.set_ylim([0.01, 1000000])
@@ -326,13 +348,13 @@ def new_plotting(event_yields, outdir=''):
         fontsize=16, fontweight='bold',
     )
 
-    lumi = upper.text(
-        upper_label, max_y*1.08, r"%.1f fb$^{-1}$ (13 TeV)" % 36,
+    upper.text(
+        upper_label, max_y*1.08, f'{LUMI[year]:.1f} fb$^{-1}$ (13 TeV)',
         fontsize=14,
     )
 
     upper.legend()
-    fig.savefig(os.path.join(outdir, f'{name}.png'), bbox_inches='tight')
+    fig.savefig(os.path.join(outdir, f'{name}_{year}.png'), bbox_inches='tight')
     plt.close()
     #plt.show()
 
@@ -351,6 +373,8 @@ def main():
                         help='Make plots in series.')
     parser.add_argument('--outdir', type=str, required=False, default=None,
                         help='Path to save plots.')
+    parser.add_argument('--nonorm', action='store_true', required=False,
+                        help='Turns off using background normalizations.')
 
     args = parser.parse_args()
 
@@ -379,12 +403,18 @@ def main():
     else:
         outdir = args.outdir
 
-    histograms = get_histograms(directory)
+    histograms = get_histograms(directory, year)
     xsections = get_xsections(xfile)
-    normalizations = get_normalizations(samples_directory, xsections, list(histograms.keys()))
+    normalizations = get_normalizations(samples_directory, xsections, list(histograms.keys()), year)
 
     df = get_bins_and_event_yields(histograms, normalizations)
-    #background_estimates = estimate_background(names, all_event_yields, disp=True)
+
+    if args.nonorm:
+        df['QCD_estimate'] = df.apply(lambda x: np.zeros(shape=x['Data'].shape[0]), axis=1)
+        bkgd_norm = np.array([1.0, 1.0, 1.0])
+    else:
+        bkgd_norm, bkgd_norm_upper, bkgd_norm_lower = estimate_background(df, disp=True, sigma=2)
+        df = scale_cregions(df, *bkgd_norm)
 
     logging.info('Making plots.')
 
@@ -392,11 +422,11 @@ def main():
         num_cpus = os.cpu_count()
         batch_size = 1 #len(all_bins) // num_cpus + 1
         (Parallel(n_jobs=num_cpus, batch_size=batch_size)
-         (delayed(new_plotting)(df.iloc[rowidx], outdir=outdir)
+         (delayed(new_plotting)(df.iloc[rowidx], bkgd_norm, year, outdir=outdir)
          for rowidx in range(df.shape[0])))
     else:
         for rowidx in range(df.shape[0]):
-            new_plotting(df.iloc[rowidx], outdir=outdir)
+            new_plotting(df.iloc[rowidx], bkgd_norm, year, outdir=outdir)
 
     logging.info(f'Finished making plots and saved to {outdir}.')
 

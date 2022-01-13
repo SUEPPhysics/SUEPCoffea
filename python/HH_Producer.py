@@ -91,53 +91,11 @@ class HH_NTuple(WSProducer):
             'region': ['DYcontrol'],
             'axis': {'label': 'Zlep_cand_mass', 'n_or_arr':  40, 'lo': 80, 'hi': 100}
         },
-        'Zlep_cand_mass_DYcontrol_cut0': {
-            'target': 'Zlep_cand_mass',
-            'name'  : 'Zlep_cand_mass_DYcontrol_cut0',  # name to write to histogram
-            'region': ['DYcontrol_cut0'],
-            'axis': {'label': 'Zlep_cand_mass', 'n_or_arr':  40, 'lo': 80, 'hi': 100}
-        },
-        'Zlep_cand_mass_DYcontrol_cut1': {
-            'target': 'Zlep_cand_mass',
-            'name'  : 'Zlep_cand_mass_DYcontrol_cut1',  # name to write to histogram
-            'region': ['DYcontrol_cut1'],
-            'axis': {'label': 'Zlep_cand_mass', 'n_or_arr':  40, 'lo': 80, 'hi': 100}
-        },
-        'Zlep_cand_mass_DYcontrol_cut2': {
-            'target': 'Zlep_cand_mass',
-            'name'  : 'Zlep_cand_mass_DYcontrol_cut2',  # name to write to histogram
-            'region': ['DYcontrol_cut2'],
-            'axis': {'label': 'Zlep_cand_mass', 'n_or_arr':  40, 'lo': 80, 'hi': 100}
-        },
-        'Zlep_cand_mass_DYcontrol_cut3': {
-            'target': 'Zlep_cand_mass',
-            'name'  : 'Zlep_cand_mass_DYcontrol_cut3',  # name to write to histogram
-            'region': ['DYcontrol_cut3'],
-            'axis': {'label': 'Zlep_cand_mass', 'n_or_arr':  40, 'lo': 80, 'hi': 100}
-        },
-        'Zlep_cand_mass_DYcontrol_cut4': {
-            'target': 'Zlep_cand_mass',
-            'name'  : 'Zlep_cand_mass_DYcontrol_cut4',  # name to write to histogram
-            'region': ['DYcontrol_cut4'],
-            'axis': {'label': 'Zlep_cand_mass', 'n_or_arr':  40, 'lo': 80, 'hi': 100}
-        },
         'Zlep_cand_mass_DYcontrol_QCD_C': {
             'target': 'Zlep_cand_mass',
             'name'  : 'Zlep_cand_mass_DYcontrol_QCD_C',  # name to write to histogram
             'region': ['DYcontrol_QCD_C'],
             'axis': {'label': 'Zlep_cand_mass', 'n_or_arr':  40, 'lo': 80, 'hi': 100}
-        },
-        'Zlep_cand_pt_DYcontrol': {
-            'target': 'Zlep_cand_pt',
-            'name'  : 'Zlep_cand_pt_DYcontrol',  # name to write to histogram
-            'region': ['DYcontrol'],
-            'axis': {'label': 'Zlep_cand_pt', 'n_or_arr': 80, 'lo': 0, 'hi': 800}
-        },
-        'Zlep_cand_mass_DYcontrol_deepCSV': {
-            'target': 'Zlep_cand_mass',
-            'name'  : 'Zlep_cand_mass_DYcontrol_deepCSV',  # name to write to histogram
-            'region': ['DYcontrolAlternative'],
-            'axis': {'label': 'Zlep_cand_mass', 'n_or_arr': 40, 'lo': 80, 'hi': 100}
         },
         'Zlep_cand_mass_TTcontrol': {
             'target': 'Zlep_cand_mass',
@@ -217,6 +175,247 @@ class HH_NTuple(WSProducer):
             'region': ['signal'],
             'axis': {'label': 'met_pt', 'n_or_arr': 60, 'lo': 0, 'hi': 600}
         },
+        'dR_l1l2': {
+            'target': 'dR_l1l2',
+            'name'  : 'dR_l1l2',  # name to write to histogram
+            'region': ['signal'],
+            'axis': {'label': 'dR_l1l2', 'n_or_arr': 70, 'lo': 0, 'hi': 7}
+        },
+        'dR_j1j2': {
+            'target': 'dR_j1j2',
+            'name'  : 'dR_j1j2',  # name to write to histogram
+            'region': ['signal'],
+            'axis': {'label': 'dR_j1j2', 'n_or_arr': 70, 'lo': 0, 'hi': 7}
+        },
+        'dR_b1b2': {
+            'target': 'dR_b1b2',
+            'name'  : 'dR_b1b2',  # name to write to histogram
+            'region': ['signal'],
+            'axis': {'label': 'dR_b1b2', 'n_or_arr': 70, 'lo': 0, 'hi': 7}
+        },
+        'dR_l1b1': {
+            'target': 'dR_l1b1',
+            'name'  : 'dR_l1b1',  # name to write to histogram
+            'region': ['signal'],
+            'axis': {'label': 'dR_l1b1', 'n_or_arr': 70, 'lo': 0, 'hi': 7}
+        },
+        'dR_l1b2': {
+            'target': 'dR_l1b2',
+            'name'  : 'dR_l1b2',  # name to write to histogram
+            'region': ['signal'],
+            'axis': {'label': 'dR_l1b2', 'n_or_arr': 70, 'lo': 0, 'hi': 7}
+        },
+        'dR_l2b1': {
+            'target': 'dR_l2b1',
+            'name'  : 'dR_l2b1',  # name to write to histogram
+            'region': ['signal'],
+            'axis': {'label': 'dR_l2b1', 'n_or_arr': 70, 'lo': 0, 'hi': 7}
+        },
+        'dR_l2b2': {
+            'target': 'dR_l2b2',
+            'name'  : 'dR_l2b2',  # name to write to histogram
+            'region': ['signal'],
+            'axis': {'label': 'dR_l2b2', 'n_or_arr': 70, 'lo': 0, 'hi': 7}
+        },
+        'dR_l1j1': {
+            'target': 'dR_l1j1',
+            'name'  : 'dR_l1j1',  # name to write to histogram
+            'region': ['signal'],
+            'axis': {'label': 'dR_l1j1', 'n_or_arr': 70, 'lo': 0, 'hi': 7}
+        },
+        'dR_l1j2': {
+            'target': 'dR_l1j2',
+            'name'  : 'dR_l1j2',  # name to write to histogram
+            'region': ['signal'],
+            'axis': {'label': 'dR_l1j2', 'n_or_arr': 70, 'lo': 0, 'hi': 7}
+        },
+        'dR_l2j1': {
+            'target': 'dR_l2j1',
+            'name'  : 'dR_l2j1',  # name to write to histogram
+            'region': ['signal'],
+            'axis': {'label': 'dR_l2j1', 'n_or_arr': 70, 'lo': 0, 'hi': 7}
+        },
+        'dR_l2j2': {
+            'target': 'dR_l2j2',
+            'name'  : 'dR_l2j2',  # name to write to histogram
+            'region': ['signal'],
+            'axis': {'label': 'dR_l2j2', 'n_or_arr': 70, 'lo': 0, 'hi': 7}
+        },
+        'cosThetaCS': {
+            'target': 'cosThetaCS',
+            'name'  : 'cosThetaCS',  # name to write to histogram
+            'region': ['signal'],
+            'axis': {'label': 'cosThetaCS', 'n_or_arr': 20, 'lo': -1, 'hi': 1}
+        },
+        'cosThetabHbb': {
+            'target': 'cosThetabHbb',
+            'name'  : 'cosThetabHbb',  # name to write to histogram
+            'region': ['signal'],
+            'axis': {'label': 'cosThetabHbb', 'n_or_arr': 20, 'lo': -1, 'hi': 1}
+        },
+        'cosThetaZjjHzz': {
+            'target': 'cosThetaZjjHzz',
+            'name'  : 'cosThetaZjjHzz',  # name to write to histogram
+            'region': ['signal'],
+            'axis': {'label': 'cosThetaZjjHzz', 'n_or_arr': 20, 'lo': -1, 'hi': 1}
+        },
+        'cosThetaZllHzz': {
+            'target': 'cosThetaZllHzz',
+            'name'  : 'cosThetaZllHzz',  # name to write to histogram
+            'region': ['signal'],
+            'axis': {'label': 'cosThetaZllHzz', 'n_or_arr': 20, 'lo': -1, 'hi': 1}
+        },
+# QCD C Region
+        'Zlep_cand_pt_QCD_C': {
+            'target': 'Zlep_cand_pt',
+            'name'  : 'Zlep_cand_pt_QCD_C',  # name to write to histogram
+            'region': ['QCD_C'],
+            'axis': {'label': 'Zlep_cand_pt', 'n_or_arr': 80, 'lo': 0, 'hi': 800}
+        },
+        'Zlep_cand_eta_QCD_C': {
+            'target': 'Zlep_cand_eta',
+            'name'  : 'Zlep_cand_eta_QCD_C',  # name to write to histogram
+            'region': ['QCD_C'],
+            'axis': {'label': 'Zlep_cand_eta', 'n_or_arr': 190, 'lo': -9, 'hi': 9}
+        },
+        'leading_lep_pt_QCD_C': {
+            'target': 'leading_lep_pt',
+            'name'  : 'leading_lep_pt_QCD_C',  # name to write to histogram
+            'region': ['QCD_C'],
+            'axis': {'label': 'leading_lep_pt', 'n_or_arr': 50, 'lo': 0, 'hi': 500}
+        },
+        'leading_lep_eta_QCD_C': {
+            'target': 'leading_lep_eta',
+            'name'  : 'leading_lep_eta_QCD_C',  # name to write to histogram
+            'region': ['QCD_C'],
+            'axis': {'label': 'leading_lep_eta', 'n_or_arr': 70, 'lo': -3, 'hi': 3}
+        },
+        'trailing_lep_pt_QCD_C': {
+            'target': 'trailing_lep_pt',
+            'name'  : 'trailing_lep_pt_QCD_C',  # name to write to histogram
+            'region': ['QCD_C'],
+            'axis': {'label': 'trailing_lep_pt', 'n_or_arr': 50, 'lo': 0, 'hi': 500}
+        },
+        'trailing_lep_eta_QCD_C': {
+            'target': 'trailing_lep_eta',
+            'name'  : 'trailing_lep_eta_QCD_C',  # name to write to histogram
+            'region': ['QCD_C'],
+            'axis': {'label': 'trailing_lep_eta', 'n_or_arr': 70, 'lo': -3, 'hi': 3}
+        },
+        'Zjet_cand_mass_QCD_C': {
+            'target': 'Zjet_cand_mass',
+            'name'  : 'Zjet_cand_mass_QCD_C',  # name to write to histogram
+            'region': ['QCD_C'],
+            'axis': {'label': 'Zjet_cand_mass', 'n_or_arr': 80, 'lo': 0, 'hi': 800}
+        },
+        'Higgsbb_cand_mass_QCD_C': {
+            'target': 'Higgsbb_cand_mass',
+            'name'  : 'Higgsbb_cand_mass_QCD_C',  # name to write to histogram
+            'region': ['QCD_C'],
+            'axis': {'label': 'Higgsbb_cand_mass', 'n_or_arr': 80, 'lo': 0, 'hi': 800}
+        },
+        'HiggsZZ_cand_mass_QCD_C': {
+            'target': 'HiggsZZ_cand_mass',
+            'name'  : 'HiggsZZ_cand_mass_QCD_C',  # name to write to histogram
+            'region': ['QCD_C'],
+            'axis': {'label': 'HiggsZZ_cand_mass', 'n_or_arr': 80, 'lo': 0, 'hi': 800}
+        },
+        'met_pt_QCD_C': {
+            'target': 'met_pt',
+            'name'  : 'met_pt_QCD_C',  # name to write to histogram
+            'region': ['QCD_C'],
+            'axis': {'label': 'met_pt', 'n_or_arr': 60, 'lo': 0, 'hi': 600}
+        },
+        'dR_l1l2_QCD_C': {
+            'target': 'dR_l1l2',
+            'name'  : 'dR_l1l2_QCD_C',  # name to write to histogram
+            'region': ['QCD_C'],
+            'axis': {'label': 'dR_l1l2', 'n_or_arr': 70, 'lo': 0, 'hi': 7}
+        },
+        'dR_j1j2_QCD_C': {
+            'target': 'dR_j1j2',
+            'name'  : 'dR_j1j2_QCD_C',  # name to write to histogram
+            'region': ['QCD_C'],
+            'axis': {'label': 'dR_j1j2', 'n_or_arr': 70, 'lo': 0, 'hi': 7}
+        },
+        'dR_b1b2_QCD_C': {
+            'target': 'dR_b1b2',
+            'name'  : 'dR_b1b2_QCD_C',  # name to write to histogram
+            'region': ['QCD_C'],
+            'axis': {'label': 'dR_b1b2', 'n_or_arr': 70, 'lo': 0, 'hi': 7}
+        },
+        'dR_l1b1_QCD_C': {
+            'target': 'dR_l1b1',
+            'name'  : 'dR_l1b1_QCD_C',  # name to write to histogram
+            'region': ['QCD_C'],
+            'axis': {'label': 'dR_l1b1', 'n_or_arr': 70, 'lo': 0, 'hi': 7}
+        },
+        'dR_l1b2_QCD_C': {
+            'target': 'dR_l1b2',
+            'name'  : 'dR_l1b2_QCD_C',  # name to write to histogram
+            'region': ['QCD_C'],
+            'axis': {'label': 'dR_l1b2', 'n_or_arr': 70, 'lo': 0, 'hi': 7}
+        },
+        'dR_l2b1_QCD_C': {
+            'target': 'dR_l2b1',
+            'name'  : 'dR_l2b1_QCD_C',  # name to write to histogram
+            'region': ['QCD_C'],
+            'axis': {'label': 'dR_l2b1', 'n_or_arr': 70, 'lo': 0, 'hi': 7}
+        },
+        'dR_l2b2_QCD_C': {
+            'target': 'dR_l2b2',
+            'name'  : 'dR_l2b2_QCD_C',  # name to write to histogram
+            'region': ['QCD_C'],
+            'axis': {'label': 'dR_l2b2', 'n_or_arr': 70, 'lo': 0, 'hi': 7}
+        },
+        'dR_l1j1_QCD_C': {
+            'target': 'dR_l1j1',
+            'name'  : 'dR_l1j1_QCD_C',  # name to write to histogram
+            'region': ['QCD_C'],
+            'axis': {'label': 'dR_l1j1', 'n_or_arr': 70, 'lo': 0, 'hi': 7}
+        },
+        'dR_l1j2_QCD_C': {
+            'target': 'dR_l1j2',
+            'name'  : 'dR_l1j2_QCD_C',  # name to write to histogram
+            'region': ['QCD_C'],
+            'axis': {'label': 'dR_l1j2', 'n_or_arr': 70, 'lo': 0, 'hi': 7}
+        },
+        'dR_l2j1_QCD_C': {
+            'target': 'dR_l2j1',
+            'name'  : 'dR_l2j1_QCD_C',  # name to write to histogram
+            'region': ['QCD_C'],
+            'axis': {'label': 'dR_l2j1', 'n_or_arr': 70, 'lo': 0, 'hi': 7}
+        },
+        'dR_l2j2_QCD_C': {
+            'target': 'dR_l2j2',
+            'name'  : 'dR_l2j2_QCD_C',  # name to write to histogram
+            'region': ['QCD_C'],
+            'axis': {'label': 'dR_l2j2', 'n_or_arr': 70, 'lo': 0, 'hi': 7}
+        },
+        'cosThetaCS_QCD_C': {
+            'target': 'cosThetaCS',
+            'name'  : 'cosThetaCS_QCD_C',  # name to write to histogram
+            'region': ['QCD_C'],
+            'axis': {'label': 'cosThetaCS', 'n_or_arr': 20, 'lo': -1, 'hi': 1}
+        },
+        'cosThetabHbb_QCD_C': {
+            'target': 'cosThetabHbb',
+            'name'  : 'cosThetabHbb_QCD_C',  # name to write to histogram
+            'region': ['QCD_C'],
+            'axis': {'label': 'cosThetabHbb', 'n_or_arr': 20, 'lo': -1, 'hi': 1}
+        },
+        'cosThetaZjjHzz_QCD_C': {
+            'target': 'cosThetaZjjHzz',
+            'name'  : 'cosThetaZjjHzz_QCD_C',  # name to write to histogram
+            'region': ['QCD_C'],
+            'axis': {'label': 'cosThetaZjjHzz', 'n_or_arr': 20, 'lo': -1, 'hi': 1}
+        },
+        'cosThetaZllHzz_QCD_C': {
+            'target': 'cosThetaZllHzz',
+            'name'  : 'cosThetaZllHzz_QCD_C',  # name to write to histogram
+            'region': ['QCD_C'],
+            'axis': {'label': 'cosThetaZllHzz', 'n_or_arr': 20, 'lo': -1, 'hi': 1}
+        },
     }
     selection = {
             "signal" : [
@@ -280,53 +479,6 @@ class HH_NTuple(WSProducer):
                 "event.Zlep_cand_mass > 80",
                 "event.Zlep_cand_mass < 100",
             ],
-            "DYcontrol_cut0" : [
-                "event.lep_category    == 1",
-                "event.event_category    == 1",
-                "event.Zlep_cand_mass > 80",
-                "event.Zlep_cand_mass < 100",
-            ],
-            "DYcontrol_cut1" : [
-                "event.ngood_bjets     >  0",
-                "event.lep_category    == 1",
-                "event.event_category    == 1",
-                "event.Zlep_cand_mass > 80",
-                "event.Zlep_cand_mass < 100",
-            ],
-            "DYcontrol_cut2" : [
-                "event.ngood_jets     >  4",
-                "event.ngood_bjets     >  0",
-                "event.lep_category    == 1",
-                "event.event_category    == 1",
-                "event.Zlep_cand_mass > 80",
-                "event.Zlep_cand_mass < 100",
-            ],
-            "DYcontrol_cut3" : [
-                "event.ngood_jets     >  4",
-                "event.ngood_bjets     >  0",
-                "event.lep_category    == 1",
-                "event.event_category    == 1",
-                "event.leading_Hbb_pt > 20",
-                "event.trailing_Hbb_pt > 20",
-                "event.leading_jet_pt > 20",
-                "event.trailing_jet_pt > 20",
-                "event.Zlep_cand_mass > 80",
-                "event.Zlep_cand_mass < 100",
-            ],
-            "DYcontrol_cut4" : [
-                "event.ngood_jets     >  4",
-                "event.ngood_bjets     >  0",
-                "event.lep_category    == 1",
-                "event.event_category    == 1",
-                "event.leading_lep_pt  > 35",
-                "event.trailing_lep_pt > 25",
-                "event.leading_Hbb_pt > 20",
-                "event.trailing_Hbb_pt > 20",
-                "event.leading_jet_pt > 20",
-                "event.trailing_jet_pt > 20",
-                "event.Zlep_cand_mass > 80",
-                "event.Zlep_cand_mass < 100",
-            ],
             "DYcontrol_QCD_C" : [
                 "event.ngood_bjets     >  0",
                 "event.lep_category    == 1",
@@ -339,19 +491,6 @@ class HH_NTuple(WSProducer):
                 "event.trailing_jet_pt > 20",
                 "event.Zlep_cand_mass > 80",
                 "event.Zlep_cand_mass < 100",
-            ],
-            "DYcontrolAlternative" : [
-                "event.ngood_bjetsC     >  0",
-                "event.lep_category    == 1",
-                "event.event_category    == 1",
-                "event.leading_lep_pt  > 20",
-                "event.trailing_lep_pt > 10",
-                "event.leading_Hbb_pt > 20",
-                "event.trailing_Hbb_pt > 20",
-                "event.leading_jet_pt > 20",
-                "event.trailing_jet_pt > 20",
-                "event.Zlep_cand_mass > 80",
-                "event.Zlep_cand_mass < 100"
             ],
             "TTcontrol" : [
                 "event.ngood_bjets     >  0",
@@ -409,22 +548,22 @@ class HH_NTuple(WSProducer):
                     pass
 
             #Muon SF
- #           if "MuonSF" in self.syst_suffix:
- #               if "Up" in self.syst_suffix:
- #                   weight = weight * event.w_muon_SFUp
- #               else:
- #                   weight = weight * event.w_muon_SFDown
- #           else:
- #               weight = weight * event.w_muon_SF
+            if "MuonSF" in self.syst_suffix:
+                if "Up" in self.syst_suffix:
+                    weight = weight * event.w_muon_SFUp
+                else:
+                    weight = weight * event.w_muon_SFDown
+            else:
+                weight = weight * event.w_muon_SF
 
             # Electron SF
- #           if "ElecronSF" in self.syst_suffix:
- #               if "Up" in self.syst_suffix:
- #                   weight = weight * event.w_electron_SFUp
- #               else:
- #                   weight = weight * event.w_electron_SFDown
- #           else:
- #               weight = weight * event.w_electron_SF
+            if "ElecronSF" in self.syst_suffix:
+                if "Up" in self.syst_suffix:
+                    weight = weight * event.w_electron_SFUp
+                else:
+                    weight = weight * event.w_electron_SFDown
+            else:
+                weight = weight * event.w_electron_SF
 
         #Prefire Weight
             try:
